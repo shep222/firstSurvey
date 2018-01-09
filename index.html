@@ -23,19 +23,54 @@
   </div>
 
   <div class="main">
-    <section id="One">
+    <section id="one">
       <h1 class="title">VA Houseing Benefits for 2017!</h1>
       <h1 class="title">Are you eligible? Take this quick survey to find out!</h1>
       <h3 class="question">Are you or a family member living with a veteran?</h3>
-
-      <div class="answerBox" onclick="selected(true)">
+      <div class="answerBox" onclick="isVet(true)">
         <div class="answerNumber">A</div>
         <h1 class="answer">Yes, we are a Veteran household</h1>
         <h1 class="checkbox">H</h1>
       </div>
-      <div class="answerBox" onclick="selected(false)">
+      <div class="answerBox" onclick="isVet(false)">
         <div class="answerNumber">B</div>
         <h1 class="answer">No, we are not a Veteran household</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+    </section>
+    <section id="two">
+      <h3 class="question">Do you currently have a mortgage?</h3>
+      <div class="answerBox" onclick="hasMortgage(false)">
+        <div class="answerNumber">A</div>
+        <h1 class="answer">No, I don't have a mortgage but I want one</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+      <div class="answerBox" onclick="hasMortgage(true)">
+        <div class="answerNumber">B</div>
+        <h1 class="answer">Yes, I have a mortgage</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+    </section>
+    <section id="three">
+      <h3 class="question">What type of home are you looking for?</h3>
+      <div class="answerBox" onclick="homeTypes('Single Family')">
+        <div class="answerNumber">A</div>
+        <h1 class="answer">Single Family</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+      <div class="answerBox" onclick="homeTypes('Multi-Family')">
+        <div class="answerNumber">B</div>
+        <h1 class="answer">Multi Family</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+      <div class="answerBox" onclick="homeTypes('Townhouse')">
+        <div class="answerNumber">C</div>
+        <h1 class="answer">Town Home</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+      <div class="answerBox" onclick="homeTypes('Condominium')">
+        <div class="answerNumber">D</div>
+        <h1 class="answer">Condo</h1>
         <h1 class="checkbox">H</h1>
       </div>
     </section>
@@ -43,11 +78,10 @@
     <div class="navButtons">
       <button onclick="next()" class="nextBtn" type="button" name="button">Next</button>
     </div>
+    <div class="navButtons">
+      <button onclick="back()" type="button" name="button">Back</button>
 
-
-
-
-
+    </div>
   </div>
 
 
