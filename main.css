@@ -1,3 +1,18 @@
+#one {
+}
+
+#two {
+  display: none;
+}
+
+#three {
+  display: none;
+}
+
+/* #back {
+  display: none;
+} */
+
 .header {
   box-shadow: 0 8px 6px -6px grey;
   padding-bottom: 10px;
@@ -26,9 +41,9 @@
   margin-top: 20px;
 }
 
-.title{
+.title {
   text-align: center;
-    margin: 0px;
+  margin: 0px;
 }
 
 .question {
