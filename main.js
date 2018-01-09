@@ -4,7 +4,7 @@ var width = 10;
 
 
 var vetStatus = true;
-var mortgage =  true;
+var mortgage = true;
 var homeType = "Single Family";
 
 
@@ -24,26 +24,26 @@ function homeTypes(answer) {
 }
 
 
-function next(){
-   var element = document.getElementById("myProgress");
-   element.style.width = (width += 10) + '%';
+function next() {
+  var element = document.getElementById("myProgress");
+  element.style.width = (width += 10) + '%';
 
-   if(currentView === 'one'){
-     lastView = 'one'
-     currentView = 'two'
-   } else if (currentView === 'two'){
-     lastView = 'two'
-     currentView = 'three'
-   }
-   // if(currentView !== 'one'){
-   //   document.getElementById(back).style.display = "block";
-   // }
-   document.getElementById(lastView).style.display = "none";
-   document.getElementById(currentView).style.display = "block";
+  if (currentView === 'one') {
+    lastView = 'one'
+    currentView = 'two'
+  } else if (currentView === 'two') {
+    lastView = 'two'
+    currentView = 'three'
+  }
+
+  document.getElementById(back).style.display = "block";
+
+  document.getElementById(lastView).style.display = "none";
+  document.getElementById(currentView).style.display = "block";
 }
 
-function back(){
-  if(currentView === 'three'){
+function back() {
+  if (currentView === 'three') {
     currentView = 'two'
     lastView = 'three'
   } else if (currentView === 'two') {
@@ -53,7 +53,7 @@ function back(){
   document.getElementById(lastView).style.display = "none";
   document.getElementById(currentView).style.display = "block";
 
-  if(width > 10){
+  if (width > 10) {
     var element = document.getElementById("myProgress");
     element.style.width = (width -= 10) + '%';
   }
