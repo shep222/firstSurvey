@@ -152,12 +152,12 @@ hr {
   width: 80vw;
 }
 
-.homeValue {
+.sliderValue {
   width: 80vw;
   margin-left: 10vw;
   text-align: center;
   border: 0;
-  font-weight: bold;
-  "
-
+  font-weight: 200;
+  font-size: 22px;
+  margin-bottom: 20px;
 }

@@ -5,7 +5,7 @@ $(function() {
     max: 1000000,
     step: 5000,
     slide: function(event, ui) {
-      $("#homeValue").val("$" + ui.value);
+      $("#est_property_value").val("$" + ui.value);
     }
   });
   $("#slider2").slider({
@@ -36,7 +36,7 @@ $(function() {
     }
   });
 
-  $("#homeValue").val("$" + $("#slider").slider("value"));
+  $("#est_property_value").val("$" + $("#slider").slider("value"));
   $("#mortgage_amount").val("$" + $("#slider2").slider("value"));
   $("#mortgage_rate").val("$" + $("#slider3").slider("value"));
   $("#est_purchase_price").val("$" + $("#slider4").slider("value"));
