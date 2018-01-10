@@ -62,7 +62,7 @@
   background: rgb(245, 245, 245);
 }
 
-.zipcodeEntry {
+.zipcodeEntry, .emailEntry {
   display: flex;
   justify-content: center;
   width: 80vw;
@@ -70,9 +70,25 @@
   margin-left: 10vw;
 }
 
-.zipInput {
+.zipInput, .emailInput {
   font-size: 24px;
   width: 300px;
+  padding-left: 10px;
+}
+
+.fNameEntry, .lNameEntry, .phoneEntry, .addressEntry {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  height: 50px;
+  margin-left: 10vw;
+  margin-bottom: 15px;
+}
+
+.fNameInput, .lNameInput, .phoneInput, .addressInput {
+  font-size: 24px;
+  width: 300px;
+  padding-left: 10px;
 }
 
 .answer {
@@ -113,4 +129,20 @@ hr {
   font-size: 30px;
   border-radius: 8px;
   margin-bottom: 20px;
+}
+
+.submitBtn {
+  display: none;
+  width: 300px;
+  height: 60px;
+  background-color: rgb(66, 139, 186);
+  color: white;
+  font-size: 30px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.submitTitle {
+  text-align: center;
+  margin-bottom: 10px;
 }
