@@ -6,6 +6,7 @@
   <title>secure1.vasurvey.info</title>
   <link rel="stylesheet" href="main.css">
   <script src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 
 </head>
@@ -74,6 +75,91 @@
         <h1 class="checkbox">H</h1>
       </div>
     </section>
+    <section id="four">
+      <h3 class="question">Estimate how much your home is worth:</h3>
+      <div class="answerBox">
+        SLIDER
+      </div>
+      <h3 class="question">Estimate how much your home is worth:</h3>
+      <div class="answerBox">
+        SLIDER
+      </div>
+    </section>
+    <section id="five">
+      <h3 class="question">Would you like $5,000 or more cash back?</h3>
+      <div class="answerBox" onclick="">
+        <div class="answerNumber">A</div>
+        <h1 class="answer">Yes</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+      <div class="answerBox" onclick="">
+        <div class="answerNumber">B</div>
+        <h1 class="answer">No</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+    </section>
+    <section id="six">
+      <h3 class="question">What is your current interest rate?</h3>
+      <div class="answerBox">
+        SLIDER
+      </div>
+    </section>
+    <section id="seven">
+      <h3 class="question">What is your current loan type?</h3>
+      <div class="answerBox" onclick="">
+        <div class="answerNumber">A</div>
+        <h1 class="answer">FHA</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+      <div class="answerBox" onclick="">
+        <div class="answerNumber">B</div>
+        <h1 class="answer">VA</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+      <div class="answerBox" onclick="">
+        <div class="answerNumber">C</div>
+        <h1 class="answer">Other</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+    </section>
+    <section id="eight">
+      <h3 class="question">What is your current credit score to the best of your knowledge?</h3>
+      <h3 class="question">(Most people have GOOD credit)</h3>
+      <div class="answerBox" onclick="">
+        <div class="answerNumber">A</div>
+        <h1 class="answer">Excellent (700+)</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+      <div class="answerBox" onclick="">
+        <div class="answerNumber">B</div>
+        <h1 class="answer">Good (700-640)</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+      <div class="answerBox" onclick="">
+        <div class="answerNumber">C</div>
+        <h1 class="answer">Average (640-600)</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+      <div class="answerBox" onclick="">
+        <div class="answerNumber">D</div>
+        <h1 class="answer">Fair (600-560)</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+      <div class="answerBox" onclick="">
+        <div class="answerNumber">D</div>
+        <h1 class="answer">Poor (Below 560)</h1>
+        <h1 class="checkbox">H</h1>
+      </div>
+    </section>
+    <section id="nine">
+      <h3 class="question">What is your current zipcode?</h3>
+      <div class="zipcodeEntry" onclick="">
+        <input class="zipInput" type="text" name="" value="" placeholder="Zip Code">
+      </div>
+    </section>
+
+
+
     <hr>
     <div class="navButtons">
       <button onclick="next()" class="nextBtn" type="button" name="button">Next</button>

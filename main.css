@@ -1,13 +1,10 @@
 #one {
 }
 
-#two {
+#two, #three{
   display: none;
 }
 
-#three {
-  display: none;
-}
 
 #back {
   display: none;
@@ -63,6 +60,19 @@
 
 .answerBox:hover {
   background: rgb(245, 245, 245);
+}
+
+.zipcodeEntry {
+  display: flex;
+  justify-content: center;
+  width: 80vw;
+  height: 50px;
+  margin-left: 10vw;
+}
+
+.zipInput {
+  font-size: 24px;
+  width: 300px;
 }
 
 .answer {

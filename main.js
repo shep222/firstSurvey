@@ -36,8 +36,7 @@ function next() {
     currentView = 'three'
   }
 
-  document.getElementById(back).style.display = "block";
-
+  document.getElementById("back").style.display = "block";
   document.getElementById(lastView).style.display = "none";
   document.getElementById(currentView).style.display = "block";
 }
@@ -49,6 +48,9 @@ function back() {
   } else if (currentView === 'two') {
     currentView = 'one'
     lastView = 'two'
+  }
+  if(currentView === 'one'){
+    document.getElementById("back").style.display = "none";
   }
   document.getElementById(lastView).style.display = "none";
   document.getElementById(currentView).style.display = "block";
