@@ -1,0 +1,22 @@
+{
+  "Purchase": {
+    "loan_purpose": "Purchase",
+    "opt_served_military": 1,
+    "zipcode": "",
+    "state": "",
+    "city": "",
+    "credit_rating": 4.5,
+    "property_type": "Single Family",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "phone_primary": ,
+    "address": "",
+    "est_property_value": 250000,
+    "mortgage_amount": 155000,
+    "mortgage_rate": 4.5,
+    "additional_cash_needed": 1,
+    "current_loan_type": "VA",
+  },
+  "Refinance" : {}
+}
