@@ -1,14 +1,45 @@
 $(function() {
   $("#slider").slider({
-    value: 100,
-    min: 0,
-    max: 500,
-    step: 50,
+    value: 160000,
+    min: 75000,
+    max: 1000000,
+    step: 5000,
     slide: function(event, ui) {
       $("#homeValue").val("$" + ui.value);
     }
   });
+  $("#slider2").slider({
+    value: 120000,
+    min: 75000,
+    max: 1000000,
+    step: 5000,
+    slide: function(event, ui) {
+      $("#mortgage_amount").val("$" + ui.value);
+    }
+  });
+  $("#slider3").slider({
+    value: 4.5,
+    min: 2.75,
+    max: 8,
+    step: .25,
+    slide: function(event, ui) {
+      $("#mortgage_rate").val(ui.value + "%");
+    }
+  });
+  $("#slider4").slider({
+    value: 160000,
+    min: 75000,
+    max: 1000000,
+    step: 5000,
+    slide: function(event, ui) {
+      $("#est_purchase_price").val("$" + ui.value);
+    }
+  });
+
   $("#homeValue").val("$" + $("#slider").slider("value"));
+  $("#mortgage_amount").val("$" + $("#slider2").slider("value"));
+  $("#mortgage_rate").val("$" + $("#slider3").slider("value"));
+  $("#est_purchase_price").val("$" + $("#slider4").slider("value"));
 });
 
 
