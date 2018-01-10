@@ -1,15 +1,15 @@
-$( function() {
-   $( "#slider" ).slider({
-     value:100,
-     min: 0,
-     max: 500,
-     step: 50,
-     slide: function( event, ui ) {
-       $( "#amount" ).val( "$" + ui.value );
-     }
-   });
-   $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
- } );
+$(function() {
+  $("#slider").slider({
+    value: 100,
+    min: 0,
+    max: 500,
+    step: 50,
+    slide: function(event, ui) {
+      $("#homeValue").val("$" + ui.value);
+    }
+  });
+  $("#homeValue").val("$" + $("#slider").slider("value"));
+});
 
 
 var lastView
@@ -63,7 +63,7 @@ function back() {
     currentView = 'one'
     lastView = 'two'
   }
-  if(currentView === 'one'){
+  if (currentView === 'one') {
     document.getElementById("back").style.display = "none";
   }
   document.getElementById(lastView).style.display = "none";

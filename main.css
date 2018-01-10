@@ -1,10 +1,8 @@
-#one {
-}
+#one {}
 
-#two, #three{
+#two, #three {
   display: none;
 }
-
 
 #back {
   display: none;
@@ -145,4 +143,21 @@ hr {
 .submitTitle {
   text-align: center;
   margin-bottom: 10px;
+}
+
+/* SLIDERS */
+
+.valueSlider {
+  margin-left: 10vw;
+  width: 80vw;
+}
+
+.homeValue {
+  width: 80vw;
+  margin-left: 10vw;
+  text-align: center;
+  border: 0;
+  font-weight: bold;
+  "
+
 }
