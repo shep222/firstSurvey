@@ -58,6 +58,7 @@ var homeType = "Single Family";
 
 
 function isVet(answer) {
+  console.log(answer);
   vetStatus = answer;
   next()
 }
