@@ -55,22 +55,22 @@
     </section>
     <section id="three">
       <h3 class="question">What type of home are you looking for?</h3>
-      <div class="answerBox" onclick="homeTypes('Single Family')">
+      <div class="answerBox" onclick="">
         <div class="answerNumber">A</div>
         <h1 class="answer">Single Family</h1>
         <h1 class="checkbox">H</h1>
       </div>
-      <div class="answerBox" onclick="homeTypes('Multi-Family')">
+      <div class="answerBox" onclick="">
         <div class="answerNumber">B</div>
         <h1 class="answer">Multi Family</h1>
         <h1 class="checkbox">H</h1>
       </div>
-      <div class="answerBox" onclick="homeTypes('Townhouse')">
+      <div class="answerBox" onclick="">
         <div class="answerNumber">C</div>
         <h1 class="answer">Town Home</h1>
         <h1 class="checkbox">H</h1>
       </div>
-      <div class="answerBox" onclick="homeTypes('Condominium')">
+      <div class="answerBox" onclick="">
         <div class="answerNumber">D</div>
         <h1 class="answer">Condo</h1>
         <h1 class="checkbox">H</h1>
@@ -301,10 +301,10 @@
 
     <hr>
     <div class="navButtons">
-      <button onclick="next()" class="nextBtn" type="button" name="button">Next</button>
+      <button id="next" onclick="next()" class="nextBtn" type="button" name="button">Next</button>
     </div>
     <div class="navButtons">
-      <button onclick="submit()" class="submitBtn" type="button" name="button">See My Results!</button>
+      <button id="submit" onclick="submit()" class="submitBtn" type="button" name="button">See My Results!</button>
     </div>
     <div class="navButtons">
       <button id="back" onclick="back()" type="button" name="button">Back</button>
