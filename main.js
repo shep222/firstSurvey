@@ -5,6 +5,12 @@ var myData
 $(document).ready(function() {
   myData = data;
   console.log(myData.Purchase.loan_purpose);
+
+  $(this).click(function() {
+    console.log("HI");
+    event.stopPropagation()
+    $(this).children("input[type=radio]").click();
+  });
 })
 
 // don't even need the load function
