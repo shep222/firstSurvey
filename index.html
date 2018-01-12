@@ -31,12 +31,12 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Yes, we are a Veteran household</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio1" checked="checked">
+          <input class="checkbox" type="radio" name="status" value="radio1" checked="checked">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">No, we are not a Veteran household</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio2">
+          <input class="checkbox" type="radio" name="status" value="radio2">
         </div>
       </section>
       <section id="two">
@@ -44,12 +44,12 @@
         <div class="answerBox" onclick="hasMortgage(false)">
           <div class="answerNumber">A</div>
           <h1 class="answer">No, I don't have a mortgage but I want one</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="mortage" value="radio1">
         </div>
         <div class="answerBox" onclick="hasMortgage(true)">
           <div class="answerNumber">B</div>
           <h1 class="answer">Yes, I have a mortgage</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio4" checked="checked">
+          <input class="checkbox" type="radio" name="mortage" value="radio2" checked="checked">
         </div>
       </section>
       <section id="three">
@@ -57,22 +57,22 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Single Family</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="homeType" value="radio1" checked="checked">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">Multi Family</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="homeType" value="radio2">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">C</div>
           <h1 class="answer">Town Home</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="homeType" value="radio3">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">D</div>
           <h1 class="answer">Condo</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="homeType" value="radio3">
         </div>
       </section>
       <!-- path 1 -->
@@ -89,12 +89,12 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Yes</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="cashBack" value="radio1">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">No</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="cashBack" value="radio2" checked="checked">
         </div>
       </section>
       <section id="six">
@@ -107,17 +107,17 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">FHA</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="loanType" value="radio1">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">VA</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="loanType" value="radio2" checked="checked">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">C</div>
           <h1 class="answer">Other</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="loanType" value="radio3">
         </div>
       </section>
       <section id="eight">
@@ -126,40 +126,40 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Excellent (700+)</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="creditScore" value="radio1">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">Good (700-640)</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="creditScore" value="radio2" checked="checked">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">C</div>
           <h1 class="answer">Average (640-600)</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="creditScore" value="radio3">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">D</div>
           <h1 class="answer">Fair (600-560)</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="creditScore" value="radio4">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">D</div>
           <h1 class="answer">Poor (Below 560)</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="creditScore" value="radio5">
         </div>
       </section>
       <section id="nine">
         <h3 class="question">What is your current zipcode?</h3>
         <div class="zipcodeEntry" onclick="">
-          <input class="zipInput" type="text" name="" value="" placeholder="Zip Code">
+          <input class="zipInput" type="text" name="currentZip" value="" placeholder="Zip Code">
         </div>
       </section>
       <section id="ten">
         <h3 class="question">Almost Done!</h3>
         <h3 class="question">What email address do you want us to send your results and next steps to?</h3>
         <div class="emailEntry" onclick="">
-          <input class="emailInput" type="text" name="" value="" placeholder="Email">
+          <input class="emailInput" type="text" name="email" value="" placeholder="Email">
         </div>
       </section>
       <!--  Path 2 -->
@@ -168,27 +168,27 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Right Away</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="buyDate" value="radio1" checked="checked">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">Within 90 days</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="buyDate" value="radio2">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">C</div>
           <h1 class="answer">3-6 Months</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="buyDate" value="radio3">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">D</div>
           <h1 class="answer">6-12 Months</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="buyDate" value="radio4">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">D</div>
           <h1 class="answer">12+ Months</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="buyDate" value="radio5">
         </div>
       </section>
       <section id="twelve">
@@ -201,27 +201,27 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">0-5%</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="downPayment" value="radio1" checked="checked">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">10%</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="downPayment" value="radio2">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">C</div>
           <h1 class="answer">15%</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="downPayment" value="radio3">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">D</div>
           <h1 class="answer">20%</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="downPayment" value="radio4">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">D</div>
           <h1 class="answer">25%</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="downPayment" value="radio5">
         </div>
       </section>
       <section id="fourteen">
@@ -229,12 +229,12 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Yes</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="agent" value="radio1">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">No</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="agent" value="radio2" checked="checked">
         </div>
       </section>
       <section id="fifteen">
@@ -242,12 +242,12 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Own</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="rent" value="radio1">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">Rent</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="rent" value="radio2" checked="checked">
         </div>
       </section>
       <section id="sixteen">
@@ -255,18 +255,18 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Yes</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="found" value="radio1">
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">No</h1>
-          <input class="checkbox" type="radio" name="radio" value="radio3">
+          <input class="checkbox" type="radio" name="found" value="radio2" checked="checked">
         </div>
       </section>
       <section id="seventeen">
         <h3 class="question">What zip code are you searching in?</h3>
         <div class="zipcodeEntry">
-          <input class="zipInput" type="text" name="" value="" placeholder="Zip Code">
+          <input class="zipInput" type="text" name="searchZip" value="" placeholder="Zip Code">
         </div>
       </section>
       <!-- Sumit Section  -->
