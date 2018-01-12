@@ -1,9 +1,9 @@
 var yes = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eighteen"]
 var no = ["one", "two", "three", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "eight", "sixteen", "nine", "seventeen", "ten", "eighteen"]
 var slider_values = [85000, 90000, 95000, 100000, 105000, 110000, 115000, 120000, 125000, 130000, 135000, 140000, 145000, 150000, 155000, 160000, 165000, 170000, 175000, 180000, 185000, 190000, 195000, 200000, 210000, 220000, 230000, 240000, 250000, 260000, 270000, 280000, 290000, 300000, 310000, 320000, 330000, 340000, 350000, 360000, 370000, 380000, 390000, 400000, 420000, 440000, 460000, 480000, 500000, 520000, 540000, 560000, 580000, 600000, 620000, 640000, 660000, 680000, 700000, 720000, 740000, 760000, 780000, 800000, 820000, 840000, 860000, 880000, 900000, 920000, 940000, 960000, 980000, 1000000, 1500000, 2000000]
-
-$(document).ready(function(){
-  var myData = data;
+var myData
+$(document).ready(function() {
+  myData = data;
   console.log(myData.Purchase.loan_purpose);
 })
 
@@ -69,8 +69,8 @@ var homeType = "Single Family";
 
 
 function isVet(answer) {
-  console.log(answer);
-  vetStatus = answer;
+  myData.Purchase.opt_served_military = answer;
+  myData.Refinance.opt_served_military = answer
   next()
 }
 
@@ -78,15 +78,15 @@ function hasMortgage(answer) {
   mortgage = answer;
   if (answer === true) {
     myData.Purchase.loan_purpose = "Refi"
+    myData.Refinance.loan_purpose = "Refi"
   } else {
     myData.Purchase.loan_purpose = "Purchase"
+    myData.Refinance.loan_purpose = "Refi"
   }
   next()
 }
 
-
 function next() {
-
   var viewPath = yes
   var myView = currentView
   var element = document.getElementById("myProgress");

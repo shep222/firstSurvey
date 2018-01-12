@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <title>secure1.vasurvey.info</title>
@@ -10,6 +11,7 @@
   <script type="text/javascript" src="data.js"></script>
   <script src="main.js"></script>
 </head>
+
 <body>
   <script src="https://lander-support.suitedconnector.com/js/xdc.min.js"></script>
   <iframe src="https://xdc.suitedconnector.com/xdc" width="0" style="display:none;"></iframe>
@@ -21,271 +23,273 @@
     <!-- <div class="progressSlider">PROGRESS</div> -->
   </div>
   <div class="main">
-    <section id="one">
-      <h1 class="title">VA Houseing Benefits for 2017!</h1>
-      <h1 class="title">Are you eligible? Take this quick survey to find out!</h1>
-      <h3 class="question">Are you or a family member living with a veteran?</h3>
-      <div class="answerBox" onclick="isVet(true)">
-        <div class="answerNumber">A</div>
-        <h1 class="answer">Yes, we are a Veteran household</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="isVet(false)">
-        <div class="answerNumber">B</div>
-        <h1 class="answer">No, we are not a Veteran household</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-    </section>
-    <section id="two">
-      <h3 class="question">Do you currently have a mortgage?</h3>
-      <div class="answerBox" onclick="hasMortgage(false)">
-        <div class="answerNumber">A</div>
-        <h1 class="answer">No, I don't have a mortgage but I want one</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="hasMortgage(true)">
-        <div class="answerNumber">B</div>
-        <h1 class="answer">Yes, I have a mortgage</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-    </section>
-    <section id="three">
-      <h3 class="question">What type of home are you looking for?</h3>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">A</div>
-        <h1 class="answer">Single Family</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">B</div>
-        <h1 class="answer">Multi Family</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">C</div>
-        <h1 class="answer">Town Home</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">D</div>
-        <h1 class="answer">Condo</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-    </section>
-    <!-- path 1 -->
-    <section id="four">
-      <h3 class="question">Estimate how much your home is worth:</h3>
-      <input type="text" id="est_property_value" class="sliderValue" readonly>
-      <div class="valueSlider" id="slider"></div>
-      <h3 class="question">How much do you still owe on your home?</h3>
-      <input type="text" id="mortgage_amount" class="sliderValue" readonly>
-      <div class="valueSlider" id="slider2"></div>
-    </section>
-    <section id="five">
-      <h3 class="question">Would you like $5,000 or more cash back?</h3>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">A</div>
-        <h1 class="answer">Yes</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">B</div>
-        <h1 class="answer">No</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-    </section>
-    <section id="six">
-      <h3 class="question">What is your current interest rate?</h3>
-      <input type="text" id="mortgage_rate" class="sliderValue" readonly>
-      <div class="valueSlider" id="slider3"></div>
-    </section>
-    <section id="seven">
-      <h3 class="question">What is your current loan type?</h3>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">A</div>
-        <h1 class="answer">FHA</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">B</div>
-        <h1 class="answer">VA</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">C</div>
-        <h1 class="answer">Other</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-    </section>
-    <section id="eight">
-      <h3 class="question">What is your current credit score to the best of your knowledge?</h3>
-      <h3 class="question">(Most people have GOOD credit)</h3>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">A</div>
-        <h1 class="answer">Excellent (700+)</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">B</div>
-        <h1 class="answer">Good (700-640)</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">C</div>
-        <h1 class="answer">Average (640-600)</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">D</div>
-        <h1 class="answer">Fair (600-560)</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">D</div>
-        <h1 class="answer">Poor (Below 560)</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-    </section>
-    <section id="nine">
-      <h3 class="question">What is your current zipcode?</h3>
-      <div class="zipcodeEntry" onclick="">
-        <input class="zipInput" type="text" name="" value="" placeholder="Zip Code">
-      </div>
-    </section>
-    <section id="ten">
-      <h3 class="question">Almost Done!</h3>
-      <h3 class="question">What email address do you want us to send your results and next steps to?</h3>
-      <div class="emailEntry" onclick="">
-        <input class="emailInput" type="text" name="" value="" placeholder="Email">
-      </div>
-    </section>
-    <!--  Path 2 -->
-    <section id="eleven">
-      <h3 class="question">When are you planning to request your $0 Down VA Loan (Up to $417,000)?</h3>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">A</div>
-        <h1 class="answer">Right Away</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">B</div>
-        <h1 class="answer">Within 90 days</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">C</div>
-        <h1 class="answer">3-6 Months</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">D</div>
-        <h1 class="answer">6-12 Months</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">D</div>
-        <h1 class="answer">12+ Months</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-    </section>
-    <section id="twelve">
-      <h3 class="question">How much would you like to borrow? (An estimate is fine...)</h3>
-      <input type="text" id="est_purchase_price" class="sliderValue" readonly>
-      <div class="valueSlider" id="slider4"></div>
-    </section>
-    <section id="thirteen">
-      <h3 class="question">What is your estimated down payment?</h3>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">A</div>
-        <h1 class="answer">0-5%</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">B</div>
-        <h1 class="answer">10%</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">C</div>
-        <h1 class="answer">15%</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">D</div>
-        <h1 class="answer">20%</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">D</div>
-        <h1 class="answer">25%</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-    </section>
-    <section id="fourteen">
-      <h3 class="question">Are you working with a real estate agent?</h3>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">A</div>
-        <h1 class="answer">Yes</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">B</div>
-        <h1 class="answer">No</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-    </section>
-    <section id="fifteen">
-      <h3 class="question">Do you currently own or rent?</h3>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">A</div>
-        <h1 class="answer">Own</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">B</div>
-        <h1 class="answer">Rent</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-    </section>
-    <section id="sixteen">
-      <h3 class="question">Have you found a home?</h3>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">A</div>
-        <h1 class="answer">Yes</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-      <div class="answerBox" onclick="">
-        <div class="answerNumber">B</div>
-        <h1 class="answer">No</h1>
-        <h1 class="checkbox">H</h1>
-      </div>
-    </section>
-    <section id="seventeen">
-      <h3 class="question">What zip code are you searching in?</h3>
-      <div class="zipcodeEntry" onclick="">
-        <input class="zipInput" type="text" name="" value="" placeholder="Zip Code">
-      </div>
-    </section>
-    <!-- Sumit Section  -->
-    <section id="eighteen">
-      <h3 class="question">Enter your information and get your results - fast!</h3>
-      <div class="submitTitle">First Name</div>
-      <div class="fNameEntry" onclick="">
-        <input class="fNameInput" type="text" name="" value="" placeholder="First Name">
-      </div>
-      <div class="submitTitle">Last Name</div>
-      <div class="lNameEntry" onclick="">
-        <input class="lNameInput" type="text" name="" value="" placeholder="Last Name">
-      </div>
-      <div class="submitTitle">Phone Primary</div>
-      <div class="phoneEntry" onclick="">
-        <input class="phoneInput" type="text" name="" value="" placeholder="Phone Primary">
-      </div>
-      <div class="submitTitle">Current Home Address</div>
-      <div class="addressEntry" onclick="">
-        <input class="addressInput" type="text" name="" value="" placeholder="Address">
-      </div>
-    </section>
+    <form class="" action="index.html" method="post">
+      <section id="one">
+        <h1 class="title">VA Houseing Benefits for 2017!</h1>
+        <h1 class="title">Are you eligible? Take this quick survey to find out!</h1>
+        <h3 class="question">Are you or a family member living with a veteran?</h3>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">A</div>
+          <h1 class="answer">Yes, we are a Veteran household</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio1" checked="checked">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">B</div>
+          <h1 class="answer">No, we are not a Veteran household</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio2">
+        </div>
+      </section>
+      <section id="two">
+        <h3 class="question">Do you currently have a mortgage?</h3>
+        <div class="answerBox" onclick="hasMortgage(false)">
+          <div class="answerNumber">A</div>
+          <h1 class="answer">No, I don't have a mortgage but I want one</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="hasMortgage(true)">
+          <div class="answerNumber">B</div>
+          <h1 class="answer">Yes, I have a mortgage</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio4" checked="checked">
+        </div>
+      </section>
+      <section id="three">
+        <h3 class="question">What type of home are you looking for?</h3>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">A</div>
+          <h1 class="answer">Single Family</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">B</div>
+          <h1 class="answer">Multi Family</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">C</div>
+          <h1 class="answer">Town Home</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">D</div>
+          <h1 class="answer">Condo</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+      </section>
+      <!-- path 1 -->
+      <section id="four">
+        <h3 class="question">Estimate how much your home is worth:</h3>
+        <input type="text" id="est_property_value" class="sliderValue" readonly>
+        <div class="valueSlider" id="slider"></div>
+        <h3 class="question">How much do you still owe on your home?</h3>
+        <input type="text" id="mortgage_amount" class="sliderValue" readonly>
+        <div class="valueSlider" id="slider2"></div>
+      </section>
+      <section id="five">
+        <h3 class="question">Would you like $5,000 or more cash back?</h3>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">A</div>
+          <h1 class="answer">Yes</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">B</div>
+          <h1 class="answer">No</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+      </section>
+      <section id="six">
+        <h3 class="question">What is your current interest rate?</h3>
+        <input type="text" id="mortgage_rate" class="sliderValue" readonly>
+        <div class="valueSlider" id="slider3"></div>
+      </section>
+      <section id="seven">
+        <h3 class="question">What is your current loan type?</h3>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">A</div>
+          <h1 class="answer">FHA</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">B</div>
+          <h1 class="answer">VA</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">C</div>
+          <h1 class="answer">Other</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+      </section>
+      <section id="eight">
+        <h3 class="question">What is your current credit score to the best of your knowledge?</h3>
+        <h3 class="question">(Most people have GOOD credit)</h3>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">A</div>
+          <h1 class="answer">Excellent (700+)</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">B</div>
+          <h1 class="answer">Good (700-640)</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">C</div>
+          <h1 class="answer">Average (640-600)</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">D</div>
+          <h1 class="answer">Fair (600-560)</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">D</div>
+          <h1 class="answer">Poor (Below 560)</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+      </section>
+      <section id="nine">
+        <h3 class="question">What is your current zipcode?</h3>
+        <div class="zipcodeEntry" onclick="">
+          <input class="zipInput" type="text" name="" value="" placeholder="Zip Code">
+        </div>
+      </section>
+      <section id="ten">
+        <h3 class="question">Almost Done!</h3>
+        <h3 class="question">What email address do you want us to send your results and next steps to?</h3>
+        <div class="emailEntry" onclick="">
+          <input class="emailInput" type="text" name="" value="" placeholder="Email">
+        </div>
+      </section>
+      <!--  Path 2 -->
+      <section id="eleven">
+        <h3 class="question">When are you planning to request your $0 Down VA Loan (Up to $417,000)?</h3>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">A</div>
+          <h1 class="answer">Right Away</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">B</div>
+          <h1 class="answer">Within 90 days</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">C</div>
+          <h1 class="answer">3-6 Months</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">D</div>
+          <h1 class="answer">6-12 Months</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">D</div>
+          <h1 class="answer">12+ Months</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+      </section>
+      <section id="twelve">
+        <h3 class="question">How much would you like to borrow? (An estimate is fine...)</h3>
+        <input type="text" id="est_purchase_price" class="sliderValue" readonly>
+        <div class="valueSlider" id="slider4"></div>
+      </section>
+      <section id="thirteen">
+        <h3 class="question">What is your estimated down payment?</h3>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">A</div>
+          <h1 class="answer">0-5%</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">B</div>
+          <h1 class="answer">10%</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">C</div>
+          <h1 class="answer">15%</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">D</div>
+          <h1 class="answer">20%</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">D</div>
+          <h1 class="answer">25%</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+      </section>
+      <section id="fourteen">
+        <h3 class="question">Are you working with a real estate agent?</h3>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">A</div>
+          <h1 class="answer">Yes</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">B</div>
+          <h1 class="answer">No</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+      </section>
+      <section id="fifteen">
+        <h3 class="question">Do you currently own or rent?</h3>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">A</div>
+          <h1 class="answer">Own</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">B</div>
+          <h1 class="answer">Rent</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+      </section>
+      <section id="sixteen">
+        <h3 class="question">Have you found a home?</h3>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">A</div>
+          <h1 class="answer">Yes</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+        <div class="answerBox" onclick="next()">
+          <div class="answerNumber">B</div>
+          <h1 class="answer">No</h1>
+          <input class="checkbox" type="radio" name="radio" value="radio3">
+        </div>
+      </section>
+      <section id="seventeen">
+        <h3 class="question">What zip code are you searching in?</h3>
+        <div class="zipcodeEntry">
+          <input class="zipInput" type="text" name="" value="" placeholder="Zip Code">
+        </div>
+      </section>
+      <!-- Sumit Section  -->
+      <section id="eighteen">
+        <h3 class="question">Enter your information and get your results - fast!</h3>
+        <div class="submitTitle">First Name</div>
+        <div class="fNameEntry" onclick="">
+          <input class="fNameInput" type="text" name="" value="" placeholder="First Name">
+        </div>
+        <div class="submitTitle">Last Name</div>
+        <div class="lNameEntry" onclick="">
+          <input class="lNameInput" type="text" name="" value="" placeholder="Last Name">
+        </div>
+        <div class="submitTitle">Phone Primary</div>
+        <div class="phoneEntry" onclick="">
+          <input class="phoneInput" type="text" name="" value="" placeholder="Phone Primary">
+        </div>
+        <div class="submitTitle">Current Home Address</div>
+        <div class="addressEntry" onclick="">
+          <input class="addressInput" type="text" name="" value="" placeholder="Address">
+        </div>
+      </section>
+    </form>
     <hr>
     <!-- Navigation buttons -->
     <div class="navButtons">
@@ -299,4 +303,5 @@
     </div>
   </div>
 </body>
+
 </html>
