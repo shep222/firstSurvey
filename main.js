@@ -4,12 +4,9 @@ var slider_values = [85000, 90000, 95000, 100000, 105000, 110000, 115000, 120000
 var myData
 $(document).ready(function() {
   myData = data;
-  console.log(myData.Purchase.loan_purpose);
 
-  $(this).click(function() {
-    console.log("HI");
-    event.stopPropagation()
-    $(this).children("input[type=radio]").click();
+  $('.answerBox').on('click', function(e) {
+    $(this).find('input').prop("checked", true);
   });
 })
 
@@ -95,8 +92,7 @@ function hasMortgage(answer) {
 function next() {
   var viewPath = yes
   var myView = currentView
-  var element = document.getElementById("myProgress");
-  element.style.width = (width += 10) + '%';
+
   if (mortgage === true) {
     viewpath = yes
   } else {
@@ -120,6 +116,9 @@ function next() {
   }
   document.getElementById(lastView).style.display = "none";
   document.getElementById(currentView).style.display = "block";
+console.log(viewPath.length);
+  var element = document.getElementById("myProgress");
+  element.style.width = (width += (100/viewPath.length)) + '%';
 }
 
 function back() {
@@ -151,8 +150,9 @@ function back() {
   }
   document.getElementById(lastView).style.display = "none";
   document.getElementById(currentView).style.display = "block";
+  console.log(viewPath.length);
   if (width > 10) {
     var element = document.getElementById("myProgress");
-    element.style.width = (width -= 10) + '%';
+    element.style.width = (width -= (viewPath.length-2)) + '%';
   }
 }
