@@ -1,7 +1,6 @@
 #one {}
 
-#two, #three, #four, #five, #six, #seven, #eight, #nine, #ten,
-#eleven, #twelve, #thirteen, #fourteen, #fifteen, #sixteen, #seventeen, #eighteen {
+#two, #three, #four, #five, #six, #seven, #eight, #nine, #ten, #eleven, #twelve, #thirteen, #fourteen, #fifteen, #sixteen, #seventeen, #eighteen {
   display: none;
 }
 
@@ -110,6 +109,12 @@
   margin-top: 25px;
 }
 
+.checkmark {
+  width: 60px;
+  height: 60px;
+  visibility: hidden;
+}
+
 hr {
   margin-top: 28px;
   width: 78vw;
@@ -163,4 +168,16 @@ hr {
   font-weight: 200;
   font-size: 22px;
   margin-bottom: 20px;
+}
+
+label > input{ /* HIDE RADIO */
+  visibility: hidden; /* Makes input not-clickable */
+  position: absolute; /* Remove input from document flow */
+}
+label > input + img{ /* IMAGE STYLES */
+  cursor:pointer;
+  border:2px solid transparent;
+}
+label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+  visibility: visible;
 }

@@ -31,12 +31,18 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Yes, we are a Veteran household</h1>
-          <input class="checkbox" type="radio" name="status"  value="1" checked="checked">
+          <label for="">
+            <input class="checkbox" type="radio" name="status"  value="1" checked="checked">
+            <img class="checkmark" src="./images/check.png" alt="">
+          </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">No, we are not a Veteran household</h1>
-          <input class="checkbox" type="radio" name="status"  value="0">
+          <label for="">
+            <input class="checkbox" type="radio" name="status" value="0">
+            <img class="checkmark" src="./images/check.png" alt="">
+          </label>
         </div>
       </section>
       <section id="two">
@@ -44,12 +50,18 @@
         <div class="answerBox" onclick="hasMortgage(false)">
           <div class="answerNumber">A</div>
           <h1 class="answer">No, I don't have a mortgage but I want one</h1>
-          <input class="checkbox" type="radio" name="mortage" value="Purchase">
+          <label>
+            <input class="checkbox" type="radio" name="mortage" value="Purchase">
+            <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="hasMortgage(true)">
           <div class="answerNumber">B</div>
           <h1 class="answer">Yes, I have a mortgage</h1>
-          <input class="checkbox" type="radio" name="mortage" value="Refinance" checked="checked">
+          <label>
+            <input class="checkbox" type="radio" name="mortage" value="Refinance" checked="checked">
+            <img class="checkmark" src="./images/check.png" alt="">
+          </label>
         </div>
       </section>
       <section id="three">
@@ -57,22 +69,34 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Single Family</h1>
+          <label>
           <input class="checkbox" type="radio" name="homeType" value="Single Family" checked="checked">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">Multi Family</h1>
+          <label>
           <input class="checkbox" type="radio" name="homeType" value="Multi-Family">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">C</div>
           <h1 class="answer">Town Home</h1>
+          <label>
           <input class="checkbox" type="radio" name="homeType" value="Townhouse">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">D</div>
           <h1 class="answer">Condo</h1>
+          <label>
           <input class="checkbox" type="radio" name="homeType" value="Condominium">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
       </section>
       <!-- path 1 -->
@@ -89,12 +113,18 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Yes</h1>
-          <input class="checkbox" type="radio" name="cashBack" value="1">
+          <label>
+            <input class="checkbox" type="radio" name="cashBack" value="1">
+            <img class="checkmark" src="./images/check.png" alt="">
+          </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">No</h1>
+          <label>
           <input class="checkbox" type="radio" name="cashBack" value="0" checked="checked">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
       </section>
       <section id="six">
@@ -107,17 +137,26 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">FHA</h1>
+          <label>
           <input class="checkbox" type="radio" name="loanType" value="FHA">
+          <img class="checkmark" src="./images/check.png" alt="">
+          </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">VA</h1>
+          <label>
           <input class="checkbox" type="radio" name="loanType" value="VA" checked="checked">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">C</div>
           <h1 class="answer">Other</h1>
+          <label>
           <input class="checkbox" type="radio" name="loanType" value="Other">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
       </section>
       <section id="eight">
@@ -126,27 +165,42 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Excellent (700+)</h1>
+          <label>
           <input class="checkbox" type="radio" name="creditScore" value="excellent">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">Good (700-640)</h1>
+          <label>
           <input class="checkbox" type="radio" name="creditScore" value="good" checked="checked">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">C</div>
           <h1 class="answer">Average (640-600)</h1>
+          <label>
           <input class="checkbox" type="radio" name="creditScore" value="average">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">D</div>
           <h1 class="answer">Fair (600-560)</h1>
+          <label>
           <input class="checkbox" type="radio" name="creditScore" value="fair">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">D</div>
           <h1 class="answer">Poor (Below 560)</h1>
+          <label>
           <input class="checkbox" type="radio" name="creditScore" value="poor">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
       </section>
       <section id="nine">
@@ -168,27 +222,42 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Right Away</h1>
+          <label>
           <input class="checkbox" type="radio" name="buyDate" value="Right Away" checked="checked">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">Within 90 days</h1>
+          <label>
           <input class="checkbox" type="radio" name="buyDate" value="0-3 Months">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">C</div>
           <h1 class="answer">3-6 Months</h1>
+          <label>
           <input class="checkbox" type="radio" name="buyDate" value="3-6 Months">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">D</div>
           <h1 class="answer">6-12 Months</h1>
+          <label>
           <input class="checkbox" type="radio" name="buyDate" value="6-12 Months">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">D</div>
           <h1 class="answer">12+ Months</h1>
+          <label>
           <input class="checkbox" type="radio" name="buyDate" value="12+ Months">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
       </section>
       <section id="twelve">
@@ -201,27 +270,42 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">0-5%</h1>
+          <label>
           <input class="checkbox" type="radio" name="downPayment" value="5.00" checked="checked">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">10%</h1>
+          <label>
           <input class="checkbox" type="radio" name="downPayment" value="10.00">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">C</div>
           <h1 class="answer">15%</h1>
+          <label>
           <input class="checkbox" type="radio" name="downPayment" value="15.00">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">D</div>
           <h1 class="answer">20%</h1>
+          <label>
           <input class="checkbox" type="radio" name="downPayment" value="20.00">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">D</div>
           <h1 class="answer">25%</h1>
+          <label>
           <input class="checkbox" type="radio" name="downPayment" value="25.00">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
       </section>
       <section id="fourteen">
@@ -229,12 +313,18 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Yes</h1>
+          <label>
           <input class="checkbox" type="radio" name="agent" value="1">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">No</h1>
+          <label>
           <input class="checkbox" type="radio" name="agent" value="0" checked="checked">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
       </section>
       <section id="fifteen">
@@ -242,12 +332,18 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Own</h1>
+          <label>
           <input class="checkbox" type="radio" name="rent" value="Own">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">Rent</h1>
+          <label>
           <input class="checkbox" type="radio" name="rent" value="Rent" checked="checked">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
       </section>
       <section id="sixteen">
@@ -255,12 +351,18 @@
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">A</div>
           <h1 class="answer">Yes</h1>
+          <label>
           <input class="checkbox" type="radio" name="found" value="1">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
         <div class="answerBox" onclick="next()">
           <div class="answerNumber">B</div>
           <h1 class="answer">No</h1>
+          <label>
           <input class="checkbox" type="radio" name="found" value="0" checked="checked">
+          <img class="checkmark" src="./images/check.png" alt="">
+        </label>
         </div>
       </section>
       <section id="seventeen">
