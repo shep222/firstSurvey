@@ -126,3 +126,7 @@ function back() {
     element.style.width = (width -= (viewPath.length - 2)) + '%';
   }
 }
+
+$("form").submit(function(event) {
+  console.log('here');
+})
