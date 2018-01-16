@@ -105,11 +105,11 @@
       <section id="four">
         <h3 class="question">Estimate how much your home is worth:</h3>
         <input  type="text" id="est_property_display" class="sliderValue" readonly>
-        <span name="est_property_value" id="est_property_value" hidden></span>
+        <input name="est_property_value" id="est_property_value" type="hidden">
         <div class="valueSlider" id="slider"></div>
         <h3 class="question">How much do you still owe on your home?</h3>
         <input type="text" id="mortgage_amount_display" class="sliderValue" readonly>
-        <span name="mortgage_amount" id="mortgage_amount" hidden></span>
+        <input name="mortgage_amount" id="mortgage_amount" type="hidden">
         <div class="valueSlider" id="slider2"></div>
       </section>
       <section id="five">
@@ -133,7 +133,8 @@
       </section>
       <section id="six">
         <h3 class="question">What is your current interest rate?</h3>
-        <input name="mortgage_rate" type="text" id="mortgage_rate" class="sliderValue" readonly>
+        <input type="text" id="mortgage_rate_display" class="sliderValue" readonly>
+        <input type="hidden" name="mortgage_rate" id="mortgage_rate">
         <div class="valueSlider" id="slider3"></div>
       </section>
       <section id="seven">
@@ -267,7 +268,7 @@
       <section id="twelve">
         <h3 class="question">How much would you like to borrow? (An estimate is fine...)</h3>
         <input  type="text" id="est_purchase_price_display" class="sliderValue" readonly>
-        <span name="est_purchase_price" id="est_purchase_price" hidden></span>
+        <input name="est_purchase_price" id="est_purchase_price" type="hidden">
         <div class="valueSlider" id="slider4"></div>
       </section>
       <section id="thirteen">
