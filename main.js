@@ -76,7 +76,7 @@ $(function() {
   $("#est_purchase_price_display").val("$" + estPropValues[13] + " - $" + estPropValues[14]);
   stripedValue(estPropValues, 13, 'est_purchase_price')
 });
-
+var valid = true;
 var lastView
 var currentView = 'one'
 var width = 10;
@@ -90,14 +90,13 @@ function hasMortgage(answer) {
 function validateForm() {
   var frame = $('section:visible');
   frame.find('input[type=text]').each(function() {
-    var isVal = $('input[type=text]').val()
+    var isVal = $(this).val()
     console.log(isVal);
     if (isVal !== "") {
       isVal = ""
-      return
+      valid = true
     } else {
-      alert("NO NO!")
-
+       valid = false
     }
   })
 
@@ -106,19 +105,18 @@ function validateForm() {
     var atSymbol = emailVal.indexOf("@");
     var dotSymbol = emailVal.lastIndexOf('.');
     if (emailVal < 1 || dotSymbol < atSymbol + 2 || dotSymbol + 2 > emailVal.length) {
-      alert("NOT A VALID EMAIL!")
-      console.log(emailVal);
+       valid = false;
     } else {
-      return;
+       valid = true;
     }
   })
 }
 
-
 function next() {
-  validateForm();
+
   var viewPath;
   var myView = currentView
+  validateForm();
 
   if (mortgage === true) {
     viewPath = yes
@@ -126,7 +124,8 @@ function next() {
     viewPath = no
   }
 
-
+console.log(valid);
+if (valid === true) {
   for (i = 0; i < viewPath.length - 1; i++) {
     if (viewPath[i] === myView) {
       currentView = viewPath[i + 1]
@@ -147,6 +146,10 @@ function next() {
   document.getElementById(currentView).style.display = "block";
   var element = document.getElementById("myProgress");
   element.style.width = (width += (100 / viewPath.length)) + '%';
+} else {
+  return
+}
+
 }
 
 function back() {
