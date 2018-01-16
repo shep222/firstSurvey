@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+
   <script type="text/javascript" src="data.js"></script>
   <script src="main.js"></script>
 </head>
@@ -23,7 +25,7 @@
     <!-- <div class="progressSlider">PROGRESS</div> -->
   </div>
   <div class="main">
-    <form class="" action="index.html" method="post">
+    <form name="myForm" action="index.html" method="post">
       <section id="one">
         <h1 class="title">VA Houseing Benefits for 2017!</h1>
         <h1 class="title">Are you eligible? Take this quick survey to find out!</h1>
@@ -102,10 +104,12 @@
       <!-- path 1 -->
       <section id="four">
         <h3 class="question">Estimate how much your home is worth:</h3>
-        <input type="text" id="est_property_value" class="sliderValue" readonly>
+        <input  type="text" id="est_property_display" class="sliderValue" readonly>
+        <span name="est_property_value" id="est_property_value" hidden></span>
         <div class="valueSlider" id="slider"></div>
         <h3 class="question">How much do you still owe on your home?</h3>
-        <input type="text" id="mortgage_amount" class="sliderValue" readonly>
+        <input type="text" id="mortgage_amount_display" class="sliderValue" readonly>
+        <span name="mortgage_amount" id="mortgage_amount" hidden></span>
         <div class="valueSlider" id="slider2"></div>
       </section>
       <section id="five">
@@ -129,7 +133,7 @@
       </section>
       <section id="six">
         <h3 class="question">What is your current interest rate?</h3>
-        <input type="text" id="mortgage_rate" class="sliderValue" readonly>
+        <input name="mortgage_rate" type="text" id="mortgage_rate" class="sliderValue" readonly>
         <div class="valueSlider" id="slider3"></div>
       </section>
       <section id="seven">
@@ -206,14 +210,14 @@
       <section id="nine">
         <h3 class="question">What is your current zipcode?</h3>
         <div class="zipcodeEntry" onclick="">
-          <input class="zipInput" type="text" name="currentZip" value="" placeholder="Zip Code">
+          <input id="currentZip" class="zipInput validate validate-zip" type="text" name="currentZip" value="" placeholder="Zip Code">
         </div>
       </section>
       <section id="ten">
         <h3 class="question">Almost Done!</h3>
         <h3 class="question">What email address do you want us to send your results and next steps to?</h3>
-        <div class="emailEntry" onclick="">
-          <input class="emailInput" type="text" name="email" value="" placeholder="Email">
+        <div class="emailEntry validate" onclick="">
+          <input class="emailInput" type="email" name="email" value="" placeholder="Email">
         </div>
       </section>
       <!--  Path 2 -->
@@ -262,7 +266,8 @@
       </section>
       <section id="twelve">
         <h3 class="question">How much would you like to borrow? (An estimate is fine...)</h3>
-        <input type="text" id="est_purchase_price" class="sliderValue" readonly>
+        <input  type="text" id="est_purchase_price_display" class="sliderValue" readonly>
+        <span name="est_purchase_price" id="est_purchase_price" hidden></span>
         <div class="valueSlider" id="slider4"></div>
       </section>
       <section id="thirteen">
@@ -368,7 +373,7 @@
       <section id="seventeen">
         <h3 class="question">What zip code are you searching in?</h3>
         <div class="zipcodeEntry">
-          <input class="zipInput" type="text" name="searchZip" value="" placeholder="Zip Code">
+          <input class="zipInput validate" type="text" name="searchZip" value="" placeholder="Zip Code">
         </div>
       </section>
       <!-- Sumit Section  -->
@@ -376,19 +381,19 @@
         <h3 class="question">Enter your information and get your results - fast!</h3>
         <div class="submitTitle">First Name</div>
         <div class="fNameEntry" onclick="">
-          <input class="fNameInput" type="text" name="fName" value="" placeholder="First Name">
+          <input class="fNameInput validate" type="text" name="fName" value="" placeholder="First Name">
         </div>
         <div class="submitTitle">Last Name</div>
         <div class="lNameEntry" onclick="">
-          <input class="lNameInput" type="text" name="lName" value="" placeholder="Last Name">
+          <input class="lNameInput validate" type="text" name="lName" value="" placeholder="Last Name">
         </div>
         <div class="submitTitle">Phone Primary</div>
         <div class="phoneEntry" onclick="">
-          <input class="phoneInput" type="text" name="primaryPhone" value="" placeholder="Phone Primary">
+          <input class="phoneInput validate" type="text" name="primaryPhone" value="" placeholder="Phone Primary">
         </div>
         <div class="submitTitle">Current Home Address</div>
         <div class="addressEntry" onclick="">
-          <input class="addressInput" type="text" name="currentAddress" value="" placeholder="Address">
+          <input class="addressInput validate" type="text" name="currentAddress" value="" placeholder="Address">
         </div>
       </section>
       <hr>
