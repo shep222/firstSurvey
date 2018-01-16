@@ -25,7 +25,7 @@
     <!-- <div class="progressSlider">PROGRESS</div> -->
   </div>
   <div class="main">
-    <form name="myForm" action="index.html" method="post">
+    <form name="myForm" id="vaForm" action="index.html" method="post">
       <section id="one">
         <h1 class="title">VA Houseing Benefits for 2017!</h1>
         <h1 class="title">Are you eligible? Take this quick survey to find out!</h1>
@@ -48,7 +48,7 @@
         </div>
       </section>
       <section id="two">
-        <h3 class="question">Do you currently have a mortgage?</h3>
+        <h3 class="`question`">Do you currently have a mortgage?</h3>
         <div class="answerBox" onclick="hasMortgage(false)">
           <div class="answerNumber">A</div>
           <h1 class="answer">No, I don't have a mortgage but I want one</h1>
@@ -104,11 +104,11 @@
       <!-- path 1 -->
       <section id="four">
         <h3 class="question">Estimate how much your home is worth:</h3>
-        <input  type="text" id="est_property_display" class="sliderValue" readonly>
+        <input  type="" id="est_property_display" class="sliderValue" readonly>
         <input name="est_property_value" id="est_property_value" type="hidden">
         <div class="valueSlider" id="slider"></div>
         <h3 class="question">How much do you still owe on your home?</h3>
-        <input type="text" id="mortgage_amount_display" class="sliderValue" readonly>
+        <input type="" id="mortgage_amount_display" class="sliderValue" readonly>
         <input name="mortgage_amount" id="mortgage_amount" type="hidden">
         <div class="valueSlider" id="slider2"></div>
       </section>
@@ -133,7 +133,7 @@
       </section>
       <section id="six">
         <h3 class="question">What is your current interest rate?</h3>
-        <input type="text" id="mortgage_rate_display" class="sliderValue" readonly>
+        <input type="" id="mortgage_rate_display" class="sliderValue" readonly>
         <input type="hidden" name="mortgage_rate" id="mortgage_rate">
         <div class="valueSlider" id="slider3"></div>
       </section>
@@ -211,7 +211,7 @@
       <section id="nine">
         <h3 class="question">What is your current zipcode?</h3>
         <div class="zipcodeEntry" onclick="">
-          <input id="currentZip" class="zipInput validate validate-zip" type="text" name="currentZip" value="" placeholder="Zip Code">
+          <input id="currentZip" class="zipInput" type="text" name="currentZip" value="" placeholder="Zip Code">
         </div>
       </section>
       <section id="ten">
