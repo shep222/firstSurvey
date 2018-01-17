@@ -82,6 +82,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 .question {
   text-align: center;
   margin-top: 0px;
+  margin-top: 10px;
 }
 
 .question1 {
@@ -90,6 +91,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   padding-top: 10px;
   font-weight: 600;
 }
+
 .question2 {
   text-align: center;
   margin-top: 0px;
@@ -106,10 +108,16 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   margin-left: 8vw;
   margin-bottom: 8px;
   border: 1px solid black;
+  color: rgb(155, 155, 155);
 }
 
 .answerBox:hover {
   background: rgb(245, 245, 245);
+}
+
+.answer {
+  font-weight: 100;
+  font-size: 20px;
 }
 
 .zipcodeEntry, .emailEntry {
@@ -138,11 +146,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   border-radius: 5px;
 }
 
-.answer {
-  color: rgb(48, 49, 125);
-  font-weight: 100;
-  font-size: 20px;
-}
 
 .answerNumber {
   margin-left: 8px;
@@ -275,10 +278,10 @@ hr {
   font-size: 16px;
   margin-bottom: 20px;
 }
-.ui-widget{
-  background: #f6a828!important;
-  }
 
+.ui-widget {
+  background: #f6a828 !important;
+}
 
 .warning {
   border: 2px solid red;
@@ -301,4 +304,7 @@ label>input+img {
 label>input:checked+img {
   /* (RADIO CHECKED) IMAGE STYLES */
   visibility: visible;
+}
+input:checked + label {
+  color: rgb(48, 49, 125);
 }

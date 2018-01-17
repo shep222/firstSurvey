@@ -29,21 +29,21 @@
       <form name="myForm" id="vaForm" action="index.html" method="post">
         <section id="one">
           <h1 class="title">VA Houseing Benefits for 2017!</h1>
-          <h1 class="title">Are you eligible? Take this quick survey to find out!</h1>
+        <h1 class="title">Are you eligible? Take this quick survey to find out!</h1>
           <h3 class="question">Are you or a family member living with a veteran?</h3>
-          <div class="answerBox" onclick="next()">
-            <div class="answerA"></div>
-            <h1 class="answer">Yes, we are a Veteran household</h1>
-            <label for="">
-              <input class="checkbox" type="radio" name="status"  value="1" checked="checked">
+          <div class="" onclick="next()">
+            <label for="r1" class="answerBox">
+              <div class="answerA"></div>
+              <h1 class="answer">Yes, we are a Veteran household</h1>
+              <input id="r1" class="checkbox" type="radio" name="status"  value="1" checked="checked">
               <img class="checkmark" src="./images/check.png" alt="">
           </label>
           </div>
-          <div class="answerBox" onclick="next()">
+          <div class="" onclick="next()">
+            <label class="answerBox" for="r2">
             <div class="answerB"></div>
             <h1 class="answer">No, we are not a Veteran household</h1>
-            <label for="">
-            <input class="checkbox" type="radio" name="status" value="0">
+            <input id="r2" class="checkbox" type="radio" name="status" value="0">
             <img class="checkmark" src="./images/check.png" alt="">
           </label>
           </div>
@@ -54,8 +54,8 @@
             <div class="answerA"></div>
             <h1 class="answer">No, I don't have a mortgage but I want one</h1>
             <label>
-            <input class="checkbox" type="radio" name="mortage" value="Purchase">
-            <img class="checkmark" src="./images/check.png" alt="">
+              <input class="checkbox" type="radio" name="mortage" value="Purchase">
+              <img class="checkmark" src="./images/check.png" alt="">
         </label>
           </div>
           <div class="answerBox" onclick="hasMortgage(true)">
