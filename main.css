@@ -1,6 +1,34 @@
+body {
+  font-family: helvetica;
+}
 
-fieldset {
-    border: 0;
+h1 {
+  font-weight: 500;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.main {
+  background-image: url('images/bg.jpg');
+  height: 100vh;
+}
+
+.allQuestions, .header {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  background-color: white;
+}
+
+.allQuestions {
+  height: 90vh;
+  padding-top: 30px;
 }
 
 #two, #three, #four, #five, #six, #seven, #eight, #nine, #ten, #eleven, #twelve, #thirteen, #fourteen, #fifteen, #sixteen, #seventeen, #eighteen {
@@ -9,21 +37,25 @@ fieldset {
 
 #back {
   display: none;
+  border: none;
+  font-size: 16px;
+  color: blue;
 }
 
 .header {
   box-shadow: 0 8px 6px -6px grey;
   padding-bottom: 10px;
+  border-bottom: 2px solid rgb(245, 245, 245);
 }
 
 .logo {
-  width: 80vw;
-  margin-left: 10vw;
+  width: 76vw;
+  margin-left: 1vw;
 }
 
 #progressBar {
-  margin-left: 5%;
-  width: 90%;
+  margin-left: 2%;
+  width: 96%;
   background-color: #ddd;
   border-radius: 5px;
 }
@@ -31,21 +63,38 @@ fieldset {
 #myProgress {
   width: 10%;
   height: 20px;
-  background-color: red;
+  background-image: url("images/stripes.png");
   border-radius: 5px;
 }
 
-.main {
-  margin-top: 20px;
-}
+.main {}
 
 .title {
   text-align: center;
   margin: 0px;
 }
 
+.selection {
+  display: flex;
+  justify-content: space-aroundx;
+}
+
 .question {
   text-align: center;
+  margin-top: 0px;
+}
+
+.question1 {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 10px;
+  font-weight: 600;
+}
+.question2 {
+  text-align: center;
+  margin-top: 0px;
+  padding-top: 10px;
+  margin-bottom: 0px;
 }
 
 .answerBox {
@@ -54,7 +103,7 @@ fieldset {
   height: 60px;
   width: 80%;
   background: rgb(225, 225, 225);
-  margin-left: 10vw;
+  margin-left: 8vw;
   margin-bottom: 8px;
   border: 1px solid black;
 }
@@ -66,9 +115,7 @@ fieldset {
 .zipcodeEntry, .emailEntry {
   display: flex;
   justify-content: center;
-  width: 80vw;
   height: 50px;
-  margin-left: 10vw;
 }
 
 .zipInput, .emailInput {
@@ -77,34 +124,80 @@ fieldset {
   padding-left: 10px;
 }
 
-.fNameEntry, .lNameEntry, .phoneEntry, .addressEntry {
+.fNameEntry, .lNameEntry, .phoneEntry, .addressEntry, .cityEntry, .stateEntry {
   display: flex;
   justify-content: center;
-  width: 80vw;
-  height: 50px;
-  margin-left: 10vw;
+  height: 40px;
   margin-bottom: 15px;
 }
 
-.fNameInput, .lNameInput, .phoneInput, .addressInput {
-  font-size: 24px;
+.fNameInput, .lNameInput, .phoneInput, .addressInput, .cityInput, .stateInput {
+  font-size: 22px;
   width: 300px;
   padding-left: 10px;
+  border-radius: 5px;
 }
 
 .answer {
-  color: rgb(78, 79, 186);
+  color: rgb(48, 49, 125);
+  font-weight: 100;
+  font-size: 20px;
 }
 
 .answerNumber {
   margin-left: 8px;
   margin-top: 10px;
   font-size: 30px;
-  border: 3px solid black;
+  border: 3px solid rgb(61, 79, 99);
   width: 36px;
   height: 36px;
   text-align: center;
   border-radius: 7px;
+}
+
+.answerA {
+  background: url('images/A-BTN.png') no-repeat;
+  height: auto;
+  width: 10%;
+  object-fit: scale-down;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+.answerB {
+  background: url('images/B-BTN.png') no-repeat;
+  height: auto;
+  width: 10%;
+  object-fit: scale-down;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+.answerC {
+  background: url('images/C-BTN.png') no-repeat;
+  height: auto;
+  width: 10%;
+  object-fit: scale-down;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+.answerD {
+  background: url('images/D-BTN.png') no-repeat;
+  height: auto;
+  width: 10%;
+  object-fit: scale-down;
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+.answerE {
+  background: url('images/E-BTN.png') no-repeat;
+  height: auto;
+  width: 10%;
+  object-fit: scale-down;
+  margin-left: 8px;
+  margin-top: 8px;
 }
 
 .checkbox {
@@ -113,14 +206,16 @@ fieldset {
 }
 
 .checkmark {
-  width: 60px;
-  height: 60px;
+  width: 17px;
+  height: 17px;
+  padding-right: 45px;
+  padding-top: 22px;
   visibility: hidden;
 }
 
 hr {
   margin-top: 28px;
-  width: 78vw;
+  width: 62vw;
   color: rgb(245, 245, 245);
   margin-bottom: 25px;
 }
@@ -140,6 +235,11 @@ hr {
   margin-bottom: 20px;
 }
 
+.nextBtn:active {
+  background-color: rgb(67, 165, 70);
+  ;
+}
+
 .submitBtn {
   display: none;
   width: 300px;
@@ -155,37 +255,50 @@ hr {
 .submitTitle {
   text-align: center;
   margin-bottom: 10px;
+  font-weight: 100;
+  color: rgb(150, 150, 150);
 }
 
 /* SLIDERS */
 
 .valueSlider {
   margin-left: 10vw;
-  width: 80vw;
+  width: 60vw;
 }
 
 .sliderValue {
-  width: 80vw;
+  width: 60vw;
   margin-left: 10vw;
   text-align: center;
   border: 0;
-  font-weight: 200;
-  font-size: 22px;
+  font-weight: 300;
+  font-size: 16px;
   margin-bottom: 20px;
 }
+.ui-widget{
+  background: #f6a828!important;
+  }
+
 
 .warning {
   border: 2px solid red;
 }
 
-label > input{ /* HIDE RADIO */
-  visibility: hidden; /* Makes input not-clickable */
-  position: absolute; /* Remove input from document flow */
+label>input {
+  /* HIDE RADIO */
+  visibility: hidden;
+  /* Makes input not-clickable */
+  position: absolute;
+  /* Remove input from document flow */
 }
-label > input + img{ /* IMAGE STYLES */
-  cursor:pointer;
-  border:2px solid transparent;
+
+label>input+img {
+  /* IMAGE STYLES */
+  cursor: pointer;
+  border: 2px solid transparent;
 }
-label > input:checked + img{ /* (RADIO CHECKED) IMAGE STYLES */
+
+label>input:checked+img {
+  /* (RADIO CHECKED) IMAGE STYLES */
   visibility: visible;
 }

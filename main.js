@@ -9,9 +9,7 @@ $(document).ready(function() {
 
 
   $("#submit").on("click", function(e) {
-    console.log(valid);
     validateForm()
-    console.log(valid);
     if (valid === true) {
       $("form").submit(function(event) {
         var str = $("form").serialize();
@@ -19,6 +17,7 @@ $(document).ready(function() {
       })
     }
   })
+
 
 
 
@@ -35,6 +34,7 @@ $(function() {
   $("#slider").slider({
     value: 30,
     max: estPropValues.length - 1,
+    range: 'min',
     slide: function(event, ui) {
       stripedValue(estPropValues, ui.value, 'est_property_value')
       if (ui.value === estPropValues.length - 1) {
@@ -47,6 +47,7 @@ $(function() {
   $("#slider2").slider({
     value: 15,
     max: estPropValues.length - 1,
+    range: 'min',
     slide: function(event, ui) {
       stripedValue(estPropValues, ui.value, 'mortgage_amount')
       if (ui.value === estPropValues.length - 1) {
@@ -59,6 +60,7 @@ $(function() {
   $("#slider3").slider({
     value: 8,
     max: rateArray.length - 1,
+    range: 'min',
     slide: function(event, ui) {
       stripedValue(rateArray, ui.value, 'mortgage_rate')
       $("#mortgage_rate_display").val(rateArray[ui.value] + "%");
@@ -67,6 +69,7 @@ $(function() {
   $("#slider4").slider({
     value: 13,
     max: estPropValues.length - 1,
+    range: 'min',
     slide: function(event, ui) {
       stripedValue(estPropValues, ui.value, 'est_purchase_price')
       if (ui.value === estPropValues.length - 1) {

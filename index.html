@@ -17,399 +17,462 @@
 <body>
   <script src="https://lander-support.suitedconnector.com/js/xdc.min.js"></script>
   <iframe src="https://xdc.suitedconnector.com/xdc" width="0" style="display:none;"></iframe>
-  <div class="header">
-    <img class="logo" src="images/logo.png" alt="">
-    <div id="progressBar">
-      <div id="myProgress"></div>
-    </div>
-    <!-- <div class="progressSlider">PROGRESS</div> -->
-  </div>
   <div class="main">
-    <form name="myForm" id="vaForm" action="index.html" method="post">
-      <section id="one">
-        <h1 class="title">VA Houseing Benefits for 2017!</h1>
-        <h1 class="title">Are you eligible? Take this quick survey to find out!</h1>
-        <h3 class="question">Are you or a family member living with a veteran?</h3>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">A</div>
-          <h1 class="answer">Yes, we are a Veteran household</h1>
-          <label for="">
-            <input class="checkbox" type="radio" name="status"  value="1" checked="checked">
-            <img class="checkmark" src="./images/check.png" alt="">
+    <div class="header">
+      <img class="logo" src="images/logo.png" alt="">
+      <div id="progressBar">
+        <div id="myProgress"></div>
+      </div>
+      <!-- <div class="progressSlider">PROGRESS</div> -->
+    </div>
+    <div class="allQuestions">
+      <form name="myForm" id="vaForm" action="index.html" method="post">
+        <section id="one">
+          <h1 class="title">VA Houseing Benefits for 2017!</h1>
+          <h1 class="title">Are you eligible? Take this quick survey to find out!</h1>
+          <h3 class="question">Are you or a family member living with a veteran?</h3>
+          <div class="answerBox" onclick="next()">
+            <div class="answerA"></div>
+            <h1 class="answer">Yes, we are a Veteran household</h1>
+            <label for="">
+              <input class="checkbox" type="radio" name="status"  value="1" checked="checked">
+              <img class="checkmark" src="./images/check.png" alt="">
           </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">B</div>
-          <h1 class="answer">No, we are not a Veteran household</h1>
-          <label for="">
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerB"></div>
+            <h1 class="answer">No, we are not a Veteran household</h1>
+            <label for="">
             <input class="checkbox" type="radio" name="status" value="0">
             <img class="checkmark" src="./images/check.png" alt="">
           </label>
-        </div>
-      </section>
-      <section id="two">
-        <h3 class="question">Do you currently have a mortgage?</h3>
-        <div class="answerBox" onclick="hasMortgage(false)">
-          <div class="answerNumber">A</div>
-          <h1 class="answer">No, I don't have a mortgage but I want one</h1>
-          <label>
+          </div>
+        </section>
+        <section id="two">
+          <h3 class="question">Do you currently have a mortgage?</h3>
+          <div class="answerBox" onclick="hasMortgage(false)">
+            <div class="answerA"></div>
+            <h1 class="answer">No, I don't have a mortgage but I want one</h1>
+            <label>
             <input class="checkbox" type="radio" name="mortage" value="Purchase">
             <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="hasMortgage(true)">
-          <div class="answerNumber">B</div>
-          <h1 class="answer">Yes, I have a mortgage</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="hasMortgage(true)">
+            <div class="answerB"></div>
+            <h1 class="answer">Yes, I have a mortgage</h1>
+            <label>
             <input class="checkbox" type="radio" name="mortage" value="Refinance" checked="checked">
             <img class="checkmark" src="./images/check.png" alt="">
           </label>
-        </div>
-      </section>
-      <section id="three">
-        <h3 class="question">What type of home are you looking for?</h3>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">A</div>
-          <h1 class="answer">Single Family</h1>
-          <label>
+          </div>
+        </section>
+        <section id="three">
+          <h3 class="question">What type of home are you looking for?</h3>
+          <div class="answerBox" onclick="next()">
+            <div class="answerA"></div>
+            <h1 class="answer">Single Family</h1>
+            <label>
           <input class="checkbox" type="radio" name="homeType" value="Single Family" checked="checked">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">B</div>
-          <h1 class="answer">Multi Family</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerB"></div>
+            <h1 class="answer">Multi Family</h1>
+            <label>
           <input class="checkbox" type="radio" name="homeType" value="Multi-Family">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">C</div>
-          <h1 class="answer">Town Home</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerC"></div>
+            <h1 class="answer">Town Home</h1>
+            <label>
           <input class="checkbox" type="radio" name="homeType" value="Townhouse">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">D</div>
-          <h1 class="answer">Condo</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerD"></div>
+            <h1 class="answer">Condo</h1>
+            <label>
           <input class="checkbox" type="radio" name="homeType" value="Condominium">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-      </section>
-      <!-- path 1 -->
-      <section id="four">
-        <h3 class="question">Estimate how much your home is worth:</h3>
-        <input  type="" id="est_property_display" class="sliderValue" readonly>
-        <input name="est_property_value" id="est_property_value" type="hidden">
-        <div class="valueSlider" id="slider"></div>
-        <h3 class="question">How much do you still owe on your home?</h3>
-        <input type="" id="mortgage_amount_display" class="sliderValue" readonly>
-        <input name="mortgage_amount" id="mortgage_amount" type="hidden">
-        <div class="valueSlider" id="slider2"></div>
-      </section>
-      <section id="five">
-        <h3 class="question">Would you like $5,000 or more cash back?</h3>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">A</div>
-          <h1 class="answer">Yes</h1>
-          <label>
+          </div>
+        </section>
+        <!-- path 1 -->
+        <section id="four">
+          <h3 class="question">Estimate how much your home is worth:</h3>
+          <input type="" id="est_property_display" class="sliderValue" readonly>
+          <input name="est_property_value" id="est_property_value" type="hidden">
+          <div class="valueSlider" id="slider"></div>
+          <h3 class="question">How much do you still owe on your home?</h3>
+          <input type="" id="mortgage_amount_display" class="sliderValue" readonly>
+          <input name="mortgage_amount" id="mortgage_amount" type="hidden">
+          <div class="valueSlider" id="slider2"></div>
+        </section>
+        <section id="five">
+          <h3 class="question">Would you like $5,000 or more cash back?</h3>
+          <div class="answerBox" onclick="next()">
+            <div class="answerA"></div>
+            <h1 class="answer">Yes</h1>
+            <label>
             <input class="checkbox" type="radio" name="cashBack" value="1">
             <img class="checkmark" src="./images/check.png" alt="">
           </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">B</div>
-          <h1 class="answer">No</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerB"></div>
+            <h1 class="answer">No</h1>
+            <label>
           <input class="checkbox" type="radio" name="cashBack" value="0" checked="checked">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-      </section>
-      <section id="six">
-        <h3 class="question">What is your current interest rate?</h3>
-        <input type="" id="mortgage_rate_display" class="sliderValue" readonly>
-        <input type="hidden" name="mortgage_rate" id="mortgage_rate">
-        <div class="valueSlider" id="slider3"></div>
-      </section>
-      <section id="seven">
-        <h3 class="question">What is your current loan type?</h3>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">A</div>
-          <h1 class="answer">FHA</h1>
-          <label>
+          </div>
+        </section>
+        <section id="six">
+          <h3 class="question">What is your current interest rate?</h3>
+          <input type="" id="mortgage_rate_display" class="sliderValue" readonly>
+          <input type="hidden" name="mortgage_rate" id="mortgage_rate">
+          <div class="valueSlider" id="slider3"></div>
+        </section>
+        <section id="seven">
+          <h3 class="question">What is your current loan type?</h3>
+          <div class="answerBox" onclick="next()">
+            <div class="answerA"></div>
+            <h1 class="answer">FHA</h1>
+            <label>
           <input class="checkbox" type="radio" name="loanType" value="FHA">
           <img class="checkmark" src="./images/check.png" alt="">
           </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">B</div>
-          <h1 class="answer">VA</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerB"></div>
+            <h1 class="answer">VA</h1>
+            <label>
           <input class="checkbox" type="radio" name="loanType" value="VA" checked="checked">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">C</div>
-          <h1 class="answer">Other</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerC"></div>
+            <h1 class="answer">Other</h1>
+            <label>
           <input class="checkbox" type="radio" name="loanType" value="Other">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-      </section>
-      <section id="eight">
-        <h3 class="question">What is your current credit score to the best of your knowledge?</h3>
-        <h3 class="question">(Most people have GOOD credit)</h3>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">A</div>
-          <h1 class="answer">Excellent (700+)</h1>
-          <label>
+          </div>
+        </section>
+        <section id="eight">
+          <h3 class="question2">What is your current credit score to the best of your knowledge?</h3>
+          <h3 class="question">(Most people have GOOD credit)</h3>
+          <div class="answerBox" onclick="next()">
+            <div class="answerA"></div>
+            <h1 class="answer">Excellent (700+)</h1>
+            <label>
           <input class="checkbox" type="radio" name="creditScore" value="excellent">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">B</div>
-          <h1 class="answer">Good (700-640)</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerB"></div>
+            <h1 class="answer">Good (700-640)</h1>
+            <label>
           <input class="checkbox" type="radio" name="creditScore" value="good" checked="checked">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">C</div>
-          <h1 class="answer">Average (640-600)</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerC"></div>
+            <h1 class="answer">Average (640-600)</h1>
+            <label>
           <input class="checkbox" type="radio" name="creditScore" value="average">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">D</div>
-          <h1 class="answer">Fair (600-560)</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerD"></div>
+            <h1 class="answer">Fair (600-560)</h1>
+            <label>
           <input class="checkbox" type="radio" name="creditScore" value="fair">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">D</div>
-          <h1 class="answer">Poor (Below 560)</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerE">E</div>
+            <h1 class="answer">Poor (Below 560)</h1>
+            <label>
           <input class="checkbox" type="radio" name="creditScore" value="poor">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-      </section>
-      <section id="nine">
-        <h3 class="question">What is your current zipcode?</h3>
-        <div class="zipcodeEntry">
-          <input id="currentZip" class="zipInput" type="number" name="currentZip" value="" placeholder="Zip Code">
-        </div>
-      </section>
-      <section id="ten">
-        <h3 class="question">Almost Done!</h3>
-        <h3 class="question">What email address do you want us to send your results and next steps to?</h3>
-        <div class="emailEntry validate" onclick="">
-          <input class="emailInput" type="email" name="email" value="" placeholder="Email">
-        </div>
-      </section>
-      <!--  Path 2 -->
-      <section id="eleven">
-        <h3 class="question">When are you planning to request your $0 Down VA Loan (Up to $417,000)?</h3>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">A</div>
-          <h1 class="answer">Right Away</h1>
-          <label>
+          </div>
+        </section>
+        <section id="nine">
+          <h3 class="question">What is your current zipcode?</h3>
+          <div class="zipcodeEntry">
+            <input id="currentZip" class="zipInput" type="number" name="currentZip" value="" placeholder="Zip Code">
+          </div>
+        </section>
+        <section id="ten">
+          <h3 class="question1">Almost Done!</h3>
+          <h3 class="question">What email address do you want us to send your results and next steps to?</h3>
+          <div class="emailEntry validate" onclick="">
+            <input class="emailInput" type="email" name="email" value="" placeholder="Email">
+          </div>
+        </section>
+        <!--  Path 2 -->
+        <section id="eleven">
+          <h3 class="question">When are you planning to request your $0 Down VA Loan (Up to $417,000)?</h3>
+          <div class="answerBox" onclick="next()">
+            <div class="answerA"></div>
+            <h1 class="answer">Right Away</h1>
+            <label>
           <input class="checkbox" type="radio" name="buyDate" value="Right Away" checked="checked">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">B</div>
-          <h1 class="answer">Within 90 days</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerB"></div>
+            <h1 class="answer">Within 90 days</h1>
+            <label>
           <input class="checkbox" type="radio" name="buyDate" value="0-3 Months">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">C</div>
-          <h1 class="answer">3-6 Months</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerC"></div>
+            <h1 class="answer">3-6 Months</h1>
+            <label>
           <input class="checkbox" type="radio" name="buyDate" value="3-6 Months">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">D</div>
-          <h1 class="answer">6-12 Months</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerD"></div>
+            <h1 class="answer">6-12 Months</h1>
+            <label>
           <input class="checkbox" type="radio" name="buyDate" value="6-12 Months">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">D</div>
-          <h1 class="answer">12+ Months</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerE"></div>
+            <h1 class="answer">12+ Months</h1>
+            <label>
           <input class="checkbox" type="radio" name="buyDate" value="12+ Months">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-      </section>
-      <section id="twelve">
-        <h3 class="question">How much would you like to borrow? (An estimate is fine...)</h3>
-        <input  type="text" id="est_purchase_price_display" class="sliderValue" readonly>
-        <input name="est_purchase_price" id="est_purchase_price" type="hidden">
-        <div class="valueSlider" id="slider4"></div>
-      </section>
-      <section id="thirteen">
-        <h3 class="question">What is your estimated down payment?</h3>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">A</div>
-          <h1 class="answer">0-5%</h1>
-          <label>
+          </div>
+        </section>
+        <section id="twelve">
+          <h3 class="question">How much would you like to borrow? (An estimate is fine...)</h3>
+          <input type="text" id="est_purchase_price_display" class="sliderValue" readonly>
+          <input name="est_purchase_price" id="est_purchase_price" type="hidden">
+          <div class="valueSlider" id="slider4"></div>
+        </section>
+        <section id="thirteen">
+          <h3 class="question">What is your estimated down payment?</h3>
+          <div class="answerBox" onclick="next()">
+            <div class="answerA"></div>
+            <h1 class="answer">0-5%</h1>
+            <label>
           <input class="checkbox" type="radio" name="downPayment" value="5.00" checked="checked">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">B</div>
-          <h1 class="answer">10%</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerB"></div>
+            <h1 class="answer">10%</h1>
+            <label>
           <input class="checkbox" type="radio" name="downPayment" value="10.00">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">C</div>
-          <h1 class="answer">15%</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerC"></div>
+            <h1 class="answer">15%</h1>
+            <label>
           <input class="checkbox" type="radio" name="downPayment" value="15.00">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">D</div>
-          <h1 class="answer">20%</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerD"></div>
+            <h1 class="answer">20%</h1>
+            <label>
           <input class="checkbox" type="radio" name="downPayment" value="20.00">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">D</div>
-          <h1 class="answer">25%</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerE"></div>
+            <h1 class="answer">25%</h1>
+            <label>
           <input class="checkbox" type="radio" name="downPayment" value="25.00">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-      </section>
-      <section id="fourteen">
-        <h3 class="question">Are you working with a real estate agent?</h3>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">A</div>
-          <h1 class="answer">Yes</h1>
-          <label>
+          </div>
+        </section>
+        <section id="fourteen">
+          <h3 class="question">Are you working with a real estate agent?</h3>
+          <div class="answerBox" onclick="next()">
+            <div class="answerA"></div>
+            <h1 class="answer">Yes</h1>
+            <label>
           <input class="checkbox" type="radio" name="agent" value="1">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">B</div>
-          <h1 class="answer">No</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerB"></div>
+            <h1 class="answer">No</h1>
+            <label>
           <input class="checkbox" type="radio" name="agent" value="0" checked="checked">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-      </section>
-      <section id="fifteen">
-        <h3 class="question">Do you currently own or rent?</h3>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">A</div>
-          <h1 class="answer">Own</h1>
-          <label>
+          </div>
+        </section>
+        <section id="fifteen">
+          <h3 class="question">Do you currently own or rent?</h3>
+          <div class="answerBox" onclick="next()">
+            <div class="answerA"></div>
+            <h1 class="answer">Own</h1>
+            <label>
           <input class="checkbox" type="radio" name="rent" value="Own">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">B</div>
-          <h1 class="answer">Rent</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerB"></div>
+            <h1 class="answer">Rent</h1>
+            <label>
           <input class="checkbox" type="radio" name="rent" value="Rent" checked="checked">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-      </section>
-      <section id="sixteen">
-        <h3 class="question">Have you found a home?</h3>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">A</div>
-          <h1 class="answer">Yes</h1>
-          <label>
+          </div>
+        </section>
+        <section id="sixteen">
+          <h3 class="question">Have you found a home?</h3>
+          <div class="answerBox" onclick="next()">
+            <div class="answerA"></div>
+            <h1 class="answer">Yes</h1>
+            <label>
           <input class="checkbox" type="radio" name="found" value="1">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
-        </div>
-        <div class="answerBox" onclick="next()">
-          <div class="answerNumber">B</div>
-          <h1 class="answer">No</h1>
-          <label>
+          </div>
+          <div class="answerBox" onclick="next()">
+            <div class="answerB"></div>
+            <h1 class="answer">No</h1>
+            <label>
           <input class="checkbox" type="radio" name="found" value="0" checked="checked">
           <img class="checkmark" src="./images/check.png" alt="">
         </label>
+          </div>
+        </section>
+        <section id="seventeen">
+          <h3 class="question">What zip code are you searching in?</h3>
+          <div class="zipcodeEntry">
+            <input class="zipInput validate" type="number" name="searchZip" value="" placeholder="Zip Code">
+          </div>
+        </section>
+        <!-- Sumit Section  -->
+        <section id="eighteen">
+          <h3 class="question1">Enter your information and get your results - fast!</h3>
+          <div class="submitTitle">First Name*</div>
+          <div class="fNameEntry" onclick="">
+            <input class="fNameInput validate" type="text" name="fName" value="" placeholder="First Name">
+          </div>
+          <div class="submitTitle">Last Name*</div>
+          <div class="lNameEntry" onclick="">
+            <input class="lNameInput validate" type="text" name="lName" value="" placeholder="Last Name">
+          </div>
+          <div class="submitTitle">Phone Primary*</div>
+          <div class="phoneEntry" onclick="">
+            <input class="phoneInput validate" type="text" name="primaryPhone" value="" placeholder="Phone">
+          </div>
+          <div class="submitTitle">Current Home Address*</div>
+          <div class="addressEntry" onclick="">
+            <input class="addressInput validate" type="text" name="currentAddress" value="" placeholder="Address">
+          </div>
+          <div class="submitTitle">City*</div>
+          <div class="cityEntry" onclick="">
+            <input class="cityInput validate" type="text" name="currentCity" value="" placeholder="City">
+          </div>
+          <div class="submitTitle">State*</div>
+          <div class="stateEntry" onclick="">
+            <!-- <input class="stateInput validate" type="text" name="currentState" value="" placeholder="State"> -->
+            <select class="stateInput validate">
+              	<option value="AL">Alabama</option>
+              	<option value="AK">Alaska</option>
+              	<option value="AZ">Arizona</option>
+              	<option value="AR">Arkansas</option>
+              	<option value="CA">California</option>
+              	<option value="CO">Colorado</option>
+              	<option value="CT">Connecticut</option>
+              	<option value="DE">Delaware</option>
+              	<option value="DC">District Of Columbia</option>
+              	<option value="FL">Florida</option>
+              	<option value="GA">Georgia</option>
+              	<option value="HI">Hawaii</option>
+              	<option value="ID">Idaho</option>
+              	<option value="IL">Illinois</option>
+              	<option value="IN">Indiana</option>
+              	<option value="IA">Iowa</option>
+              	<option value="KS">Kansas</option>
+              	<option value="KY">Kentucky</option>
+              	<option value="LA">Louisiana</option>
+              	<option value="ME">Maine</option>
+              	<option value="MD">Maryland</option>
+              	<option value="MA">Massachusetts</option>
+              	<option value="MI">Michigan</option>
+              	<option value="MN">Minnesota</option>
+              	<option value="MS">Mississippi</option>
+              	<option value="MO">Missouri</option>
+              	<option value="MT">Montana</option>
+              	<option value="NE">Nebraska</option>
+              	<option value="NV">Nevada</option>
+              	<option value="NH">New Hampshire</option>
+              	<option value="NJ">New Jersey</option>
+              	<option value="NM">New Mexico</option>
+              	<option value="NY">New York</option>
+              	<option value="NC">North Carolina</option>
+              	<option value="ND">North Dakota</option>
+              	<option value="OH">Ohio</option>
+              	<option value="OK">Oklahoma</option>
+              	<option value="OR">Oregon</option>
+              	<option value="PA">Pennsylvania</option>
+              	<option value="RI">Rhode Island</option>
+              	<option value="SC">South Carolina</option>
+              	<option value="SD">South Dakota</option>
+              	<option value="TN">Tennessee</option>
+              	<option value="TX">Texas</option>
+              	<option value="UT">Utah</option>
+              	<option value="VT">Vermont</option>
+              	<option value="VA">Virginia</option>
+              	<option value="WA">Washington</option>
+              	<option value="WV">West Virginia</option>
+              	<option value="WI">Wisconsin</option>
+              	<option value="WY">Wyoming</option>
+              </select>
+          </div>
+        </section>
+        <hr>
+        <div class="navButtons">
+          <input type="button" id="submit" class="submitBtn" value="See My Result!">
         </div>
-      </section>
-      <section id="seventeen">
-        <h3 class="question">What zip code are you searching in?</h3>
-        <div class="zipcodeEntry">
-          <input class="zipInput validate" type="number" name="searchZip" value="" placeholder="Zip Code">
-        </div>
-      </section>
-      <!-- Sumit Section  -->
-      <section id="eighteen">
-        <h3 class="question">Enter your information and get your results - fast!</h3>
-        <div class="submitTitle">First Name</div>
-        <div class="fNameEntry" onclick="">
-          <input class="fNameInput validate" type="text" name="fName" value="" placeholder="First Name">
-        </div>
-        <div class="submitTitle">Last Name</div>
-        <div class="lNameEntry" onclick="">
-          <input class="lNameInput validate" type="text" name="lName" value="" placeholder="Last Name">
-        </div>
-        <div class="submitTitle">Phone Primary</div>
-        <div class="phoneEntry" onclick="">
-          <input class="phoneInput validate" type="text" name="primaryPhone" value="" placeholder="Phone Primary">
-        </div>
-        <div class="submitTitle">Current Home Address</div>
-        <div class="addressEntry" onclick="">
-          <input class="addressInput validate" type="text" name="currentAddress" value="" placeholder="Address">
-        </div>
-      </section>
-      <hr>
-      <div class="navButtons">
-        <input type="button" id="submit" class="submitBtn" value="Submit">
-      </div>
-    </form>
-    <span></span>
-    <!-- Navigation buttons -->
+      </form>
+      <span></span>
+      <!-- Navigation buttons -->
 
-    <div class="navButtons">
-      <button id="next" onclick="next()" class="nextBtn" type="button" name="button">Next</button>
-    </div>
-    <div class="navButtons">
-      <button id="back" onclick="back()" type="button" name="button">Back</button>
+      <div class="navButtons">
+        <button id="next" onclick="next()" class="nextBtn" type="button" name="button">Next</button>
+      </div>
+      <div class="navButtons">
+        <button id="back" onclick="back()" type="button" name="button">Back</button>
+      </div>
     </div>
   </div>
 </body>
