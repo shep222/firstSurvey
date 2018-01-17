@@ -149,6 +149,7 @@ hr {
   font-size: 30px;
   border-radius: 8px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .submitTitle {
@@ -171,6 +172,10 @@ hr {
   font-weight: 200;
   font-size: 22px;
   margin-bottom: 20px;
+}
+
+.warning {
+  border: 2px solid red;
 }
 
 label > input{ /* HIDE RADIO */
