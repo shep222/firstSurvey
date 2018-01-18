@@ -124,6 +124,11 @@ hr {
 .navButtons {
   display: flex;
   justify-content: center;
+    outline: none;
+}
+
+button:focus {
+  outline:0;
 }
 
 .nextBtn {

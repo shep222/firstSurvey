@@ -99,6 +99,23 @@ function hasMortgage(answer) {
   next()
 }
 
+function runZip(zip) {
+  var client = new XMLHttpRequest();
+  client.open("GET", 'http://api.zippopotam.us/us/'+zip, true);
+  client.onreadystatechange = function() {
+    if (client.readyState == 4) {
+      let myData = JSON.parse(client.responseText);
+      if (Object.keys(myData).length === 0) {
+        console.log("Nothing here!");
+      } else {
+        console.log(myData.places[0]["place name"]);
+        console.log(myData.places[0]["state abbreviation"]);
+      }
+    };
+  };
+  client.send();
+}
+
 function validateForm() {
   var frame = $('section:visible');
 
@@ -108,6 +125,7 @@ function validateForm() {
       isVal = ""
       $(this).removeClass("warning")
       valid = true
+      runZip(isZip)
     } else {
       $(this).addClass("warning")
       $(this).focus()
