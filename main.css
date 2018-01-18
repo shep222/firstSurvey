@@ -2,12 +2,8 @@ body {
   font-family: helvetica;
 }
 
-h1 {
+h1, h3 {
   font-weight: 500;
-}
-
-h3 {
-  font-weight: 400;
 }
 
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
@@ -17,7 +13,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
 
 .main {
   background-image: url('images/bg.jpg');
-  height: 100vh;
+
 }
 
 .allQuestions, .header {
@@ -67,16 +63,9 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   border-radius: 5px;
 }
 
-.main {}
-
 .title {
   text-align: center;
   margin: 0px;
-}
-
-.selection {
-  display: flex;
-  justify-content: space-aroundx;
 }
 
 .question {
@@ -97,30 +86,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   margin-top: 0px;
   padding-top: 10px;
   margin-bottom: 0px;
-}
-
-.answerBox {
-  display: flex;
-  justify-content: space-between;
-  height: 60px;
-  width: 80%;
-  background: rgb(225, 225, 225);
-  margin-left: 8vw;
-  margin-bottom: 8px;
-  border: 1px solid black;
-  color: rgb(155, 155, 155);
-  font-size: 22px;
-  font-weight: 300;
-  line-height: 2.9;
-}
-
-.answerBox:hover {
-  background: rgb(245, 245, 245);
-}
-
-.answer {
-  font-weight: 100;
-  font-size: 20px;
 }
 
 .zipcodeEntry, .emailEntry {
@@ -147,72 +112,6 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
   width: 300px;
   padding-left: 10px;
   border-radius: 5px;
-}
-
-
-.answerNumber {
-  margin-left: 8px;
-  margin-top: 10px;
-  font-size: 30px;
-  border: 3px solid rgb(61, 79, 99);
-  width: 36px;
-  height: 36px;
-  text-align: center;
-  border-radius: 7px;
-}
-
-.answerA {
-  height: auto;
-  width: 10%;
-  object-fit: scale-down;
-  margin-left: 8px;
-}
-
-.answerB {
-  height: auto;
-  width: 10%;
-  object-fit: scale-down;
-  margin-left: 8px;
-}
-
-.answerC {
-  background: url('images/C-BTN.png') no-repeat;
-  height: auto;
-  width: 10%;
-  object-fit: scale-down;
-  margin-left: 8px;
-  margin-top: 8px;
-}
-
-.answerD {
-  background: url('images/D-BTN.png') no-repeat;
-  height: auto;
-  width: 10%;
-  object-fit: scale-down;
-  margin-left: 8px;
-  margin-top: 8px;
-}
-
-.answerE {
-  background: url('images/E-BTN.png') no-repeat;
-  height: auto;
-  width: 10%;
-  object-fit: scale-down;
-  margin-left: 8px;
-  margin-top: 8px;
-}
-
-.checkbox {
-  margin-right: 25px;
-  margin-top: 25px;
-}
-
-.checkmark {
-  width: 17px;
-  height: 17px;
-  padding-right: 45px;
-  padding-top: 22px;
-  visibility: hidden;
 }
 
 hr {
@@ -261,6 +160,10 @@ hr {
   color: rgb(150, 150, 150);
 }
 
+.warning {
+  border: 2px solid red;
+}
+
 /* SLIDERS */
 
 .valueSlider {
@@ -280,33 +183,6 @@ hr {
 
 .ui-widget {
   background: #f6a828 !important;
-}
-
-.warning {
-  border: 2px solid red;
-}
-
-label>input {
-  /* HIDE RADIO */
-  visibility: hidden;
-  /* Makes input not-clickable */
-  position: absolute;
-  /* Remove input from document flow */
-}
-
-label>input+img {
-  /* IMAGE STYLES */
-  cursor: pointer;
-  border: 2px solid transparent;
-}
-
-label>input:checked+img {
-  /* (RADIO CHECKED) IMAGE STYLES */
-  visibility: visible;
-}
-
-input[type="radio"]:checked + label {
-  color: rgb(48, 49, 125);
 }
 
 /* button Styles */
@@ -332,6 +208,9 @@ flex-direction: column;
   background-size: 18px 15px;
   padding-right: 60px;
 }
+.btn:hover {
+  background-color: rgb(245, 245, 245);
+}
 
 .btnImg {
   float: left;
@@ -347,4 +226,12 @@ flex-direction: column;
 
 .radios {
   display: none;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+input[type="radio"]:checked + label {
+  color: rgb(48, 49, 125);
 }
