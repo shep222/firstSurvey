@@ -29,79 +29,38 @@
       <form name="myForm" id="vaForm" action="index.html" method="post">
         <section id="one">
           <h1 class="title">VA Houseing Benefits for 2017!</h1>
-        <h1 class="title">Are you eligible? Take this quick survey to find out!</h1>
+          <h1 class="title">Are you eligible? Take this quick survey to find out!</h1>
           <h3 class="question">Are you or a family member living with a veteran?</h3>
-          <div class="" onclick="next()">
-            <label for="r1" class="answerBox">
-              <div class="answerA"></div>
-              <h1 class="answer">Yes, we are a Veteran household</h1>
-              <input id="r1" class="checkbox" type="radio" name="status"  value="1" checked="checked">
-              <img class="checkmark" src="./images/check.png" alt="">
-          </label>
-          </div>
-          <div class="" onclick="next()">
-            <label class="answerBox" for="r2">
-            <div class="answerB"></div>
-            <h1 class="answer">No, we are not a Veteran household</h1>
-            <input id="r2" class="checkbox" type="radio" name="status" value="0">
-            <img class="checkmark" src="./images/check.png" alt="">
-          </label>
+          <div class="answerList">
+            <input class="radios" id="r1" type="radio" name="status"  value="1" checked="checked" onclick="next()">
+            <label class="btn" for="r1"><img class="btnImg" src="./images/A-BTN.png">Yes, we are a Veteran household.</label>
+            <input class="radios" id="r2" type="radio" name="status" value="0" onclick="next()">
+            <label class="btn" for="r2"><img class="btnImg" src="./images/B-BTN.png" >  No, we are not a Veteran household.</label>
           </div>
         </section>
         <section id="two">
           <h3 class="question">Do you currently have a mortgage?</h3>
-          <div class="answerBox" onclick="hasMortgage(false)">
-            <div class="answerA"></div>
-            <h1 class="answer">No, I don't have a mortgage but I want one</h1>
-            <label>
-              <input class="checkbox" type="radio" name="mortage" value="Purchase">
-              <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="hasMortgage(true)">
-            <div class="answerB"></div>
-            <h1 class="answer">Yes, I have a mortgage</h1>
-            <label>
-            <input class="checkbox" type="radio" name="mortage" value="Refinance" checked="checked">
-            <img class="checkmark" src="./images/check.png" alt="">
-          </label>
+          <div class="answerList">
+            <input class="radios" id="r3" type="radio" name="mortage"  value="Purchase"  onclick="hasMortgage(false)">
+            <label class="btn" for="r3"><img class="btnImg" src="./images/A-BTN.png">No, I don't have a mortgage but I want one</label>
+            <input class="radios" id="r4" type="radio" name="mortage" value="Refinance" onclick="hasMortgage(true)" checked="checked">
+            <label class="btn" for="r4"><img class="btnImg" src="./images/B-BTN.png" >Yes, I have a mortgage</label>
           </div>
         </section>
         <section id="three">
           <h3 class="question">What type of home are you looking for?</h3>
-          <div class="answerBox" onclick="next()">
-            <div class="answerA"></div>
-            <h1 class="answer">Single Family</h1>
-            <label>
-          <input class="checkbox" type="radio" name="homeType" value="Single Family" checked="checked">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerB"></div>
-            <h1 class="answer">Multi Family</h1>
-            <label>
-          <input class="checkbox" type="radio" name="homeType" value="Multi-Family">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerC"></div>
-            <h1 class="answer">Town Home</h1>
-            <label>
-          <input class="checkbox" type="radio" name="homeType" value="Townhouse">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerD"></div>
-            <h1 class="answer">Condo</h1>
-            <label>
-          <input class="checkbox" type="radio" name="homeType" value="Condominium">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
+          <div class="answerList">
+            <input class="radios" id="r5" type="radio" name="homeType" value="Single family" onclick="next()" checked="checked">
+            <label for="r5" class="btn"><img class="btnImg" src="./images/A-BTN.png">Single Family</label>
+            <input class="radios" id="r6" type="radio" name="homeType" value="Multi-family" onclick="next()">
+            <label for="r6" class="btn"><img class="btnImg" src="./images/B-BTN.png">Multi Family</label>
+            <input class="radios" id="r7" type="radio" name="homeType" value="Townhouse" onclick="next()">
+            <label for="r7" class="btn"><img class="btnImg" src="./images/C-BTN.png">Town Home</label>
+            <input class="radios" id="r8" type="radio" name="homeType" value="Condominium" onclick="next()">
+            <label for="r8" class="btn"><img class="btnImg" src="./images/D-BTN.png">Condo</label>
           </div>
         </section>
+
         <!-- path 1 -->
         <section id="four">
           <h3 class="question">Estimate how much your home is worth:</h3>
@@ -115,21 +74,11 @@
         </section>
         <section id="five">
           <h3 class="question">Would you like $5,000 or more cash back?</h3>
-          <div class="answerBox" onclick="next()">
-            <div class="answerA"></div>
-            <h1 class="answer">Yes</h1>
-            <label>
-            <input class="checkbox" type="radio" name="cashBack" value="1">
-            <img class="checkmark" src="./images/check.png" alt="">
-          </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerB"></div>
-            <h1 class="answer">No</h1>
-            <label>
-          <input class="checkbox" type="radio" name="cashBack" value="0" checked="checked">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
+          <div class="answerList">
+            <input class="radios" id="r9" type="radio" name="cashBack"  value="1"  onclick="next()">
+            <label class="btn" for="r9"><img class="btnImg" src="./images/A-BTN.png">Yes</label>
+            <input class="radios" id="r10" type="radio" name="cashBack" value="0" onclick="next()" checked="checked">
+            <label class="btn" for="r10"><img class="btnImg" src="./images/B-BTN.png" >No</label>
           </div>
         </section>
         <section id="six">
@@ -140,73 +89,30 @@
         </section>
         <section id="seven">
           <h3 class="question">What is your current loan type?</h3>
-          <div class="answerBox" onclick="next()">
-            <div class="answerA"></div>
-            <h1 class="answer">FHA</h1>
-            <label>
-          <input class="checkbox" type="radio" name="loanType" value="FHA">
-          <img class="checkmark" src="./images/check.png" alt="">
-          </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerB"></div>
-            <h1 class="answer">VA</h1>
-            <label>
-          <input class="checkbox" type="radio" name="loanType" value="VA" checked="checked">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerC"></div>
-            <h1 class="answer">Other</h1>
-            <label>
-          <input class="checkbox" type="radio" name="loanType" value="Other">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
+
+          <div class="answerList">
+            <input class="radios" id="r11" type="radio" name="loanType"  value="FHA"  onclick="next()">
+            <label class="btn" for="r11"><img class="btnImg" src="./images/A-BTN.png">FHA</label>
+            <input class="radios" id="r12" type="radio" name="loanType" value="VA" onclick="next()" checked="checked">
+            <label class="btn" for="r12"><img class="btnImg" src="./images/B-BTN.png" >VA</label>
+            <input class="radios" id="r13" type="radio" name="loanType" value="Other" onclick="next()">
+            <label class="btn" for="r13"><img class="btnImg" src="./images/C-BTN.png" >Other</label>
           </div>
         </section>
         <section id="eight">
           <h3 class="question2">What is your current credit score to the best of your knowledge?</h3>
           <h3 class="question">(Most people have GOOD credit)</h3>
-          <div class="answerBox" onclick="next()">
-            <div class="answerA"></div>
-            <h1 class="answer">Excellent (700+)</h1>
-            <label>
-          <input class="checkbox" type="radio" name="creditScore" value="excellent">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerB"></div>
-            <h1 class="answer">Good (700-640)</h1>
-            <label>
-          <input class="checkbox" type="radio" name="creditScore" value="good" checked="checked">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerC"></div>
-            <h1 class="answer">Average (640-600)</h1>
-            <label>
-          <input class="checkbox" type="radio" name="creditScore" value="average">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerD"></div>
-            <h1 class="answer">Fair (600-560)</h1>
-            <label>
-          <input class="checkbox" type="radio" name="creditScore" value="fair">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerE">E</div>
-            <h1 class="answer">Poor (Below 560)</h1>
-            <label>
-          <input class="checkbox" type="radio" name="creditScore" value="poor">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
+          <div class="answerList">
+            <input class="radios" id="r14" type="radio" name="creditScore" value="excellent"  onclick="next()">
+            <label class="btn" for="r14"><img class="btnImg" src="./images/A-BTN.png">Excellent (700+)</label>
+            <input class="radios" id="r15" type="radio" name="creditScore" value="good" onclick="next()" checked="checked">
+            <label class="btn" for="r15"><img class="btnImg" src="./images/B-BTN.png" >Good (700-640)</label>
+            <input class="radios" id="r16" type="radio" name="creditScore" value="average" onclick="next()">
+            <label class="btn" for="r16"><img class="btnImg" src="./images/C-BTN.png" >Average (640-600)</label>
+            <input class="radios" id="r17" type="radio" name="creditScore" value="fair" onclick="next()">
+            <label class="btn" for="r17"><img class="btnImg" src="./images/D-BTN.png" >Fair (600-560)</label>
+            <input class="radios" id="r18" type="radio" name="creditScore" value="poor" onclick="next()">
+            <label class="btn" for="r18"><img class="btnImg" src="./images/E-BTN.png" >Poor (Below 560)</label>
           </div>
         </section>
         <section id="nine">
@@ -225,45 +131,18 @@
         <!--  Path 2 -->
         <section id="eleven">
           <h3 class="question">When are you planning to request your $0 Down VA Loan (Up to $417,000)?</h3>
-          <div class="answerBox" onclick="next()">
-            <div class="answerA"></div>
-            <h1 class="answer">Right Away</h1>
-            <label>
-          <input class="checkbox" type="radio" name="buyDate" value="Right Away" checked="checked">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerB"></div>
-            <h1 class="answer">Within 90 days</h1>
-            <label>
-          <input class="checkbox" type="radio" name="buyDate" value="0-3 Months">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerC"></div>
-            <h1 class="answer">3-6 Months</h1>
-            <label>
-          <input class="checkbox" type="radio" name="buyDate" value="3-6 Months">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerD"></div>
-            <h1 class="answer">6-12 Months</h1>
-            <label>
-          <input class="checkbox" type="radio" name="buyDate" value="6-12 Months">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerE"></div>
-            <h1 class="answer">12+ Months</h1>
-            <label>
-          <input class="checkbox" type="radio" name="buyDate" value="12+ Months">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
+
+          <div class="answerList">
+            <input class="radios" id="r19" type="radio" name="buyDate" value="Right Away"  onclick="next()" checked="checked">
+            <label class="btn" for="r19"><img class="btnImg" src="./images/A-BTN.png">Right Away</label>
+            <input class="radios" id="r20" type="radio" name="buyDate" value="0-3 Months" onclick="next()" >
+            <label class="btn" for="r20"><img class="btnImg" src="./images/B-BTN.png" >Within 90 days</label>
+            <input class="radios" id="r21" type="radio" name="buyDate" value="3-6 Months" onclick="next()">
+            <label class="btn" for="r21"><img class="btnImg" src="./images/C-BTN.png" >3-6 Months</label>
+            <input class="radios" id="r22" type="radio" name="buyDate" value="6-12 Months" onclick="next()">
+            <label class="btn" for="r22"><img class="btnImg" src="./images/D-BTN.png" >6-12 Months</label>
+            <input class="radios" id="r23" type="radio" name="buyDate" value="12+ Months" onclick="next()">
+            <label class="btn" for="r23"><img class="btnImg" src="./images/E-BTN.png" >12+ Months</label>
           </div>
         </section>
         <section id="twelve">
@@ -274,102 +153,44 @@
         </section>
         <section id="thirteen">
           <h3 class="question">What is your estimated down payment?</h3>
-          <div class="answerBox" onclick="next()">
-            <div class="answerA"></div>
-            <h1 class="answer">0-5%</h1>
-            <label>
-          <input class="checkbox" type="radio" name="downPayment" value="5.00" checked="checked">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerB"></div>
-            <h1 class="answer">10%</h1>
-            <label>
-          <input class="checkbox" type="radio" name="downPayment" value="10.00">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerC"></div>
-            <h1 class="answer">15%</h1>
-            <label>
-          <input class="checkbox" type="radio" name="downPayment" value="15.00">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerD"></div>
-            <h1 class="answer">20%</h1>
-            <label>
-          <input class="checkbox" type="radio" name="downPayment" value="20.00">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerE"></div>
-            <h1 class="answer">25%</h1>
-            <label>
-          <input class="checkbox" type="radio" name="downPayment" value="25.00">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
+          <div class="answerList">
+            <input class="radios" id="r24" type="radio" name="downPayment" value="5.00" onclick="next()" checked="checked">
+            <label class="btn" for="r24"><img class="btnImg" src="./images/A-BTN.png">0-5%</label>
+            <input class="radios" id="r25" type="radio" name="downPayment" value="10.00" onclick="next()" >
+            <label class="btn" for="r25"><img class="btnImg" src="./images/B-BTN.png" >10%</label>
+            <input class="radios" id="r26" type="radio" name="downPayment" value="15.00" onclick="next()">
+            <label class="btn" for="r26"><img class="btnImg" src="./images/C-BTN.png" >15%</label>
+            <input class="radios" id="r27" type="radio" name="downPayment" value="20.00" onclick="next()">
+            <label class="btn" for="r27"><img class="btnImg" src="./images/D-BTN.png" >20%</label>
+            <input class="radios" id="r28" type="radio" name="downPayment" value="25.00" onclick="next()">
+            <label class="btn" for="r28"><img class="btnImg" src="./images/E-BTN.png" >25%</label>
           </div>
         </section>
         <section id="fourteen">
           <h3 class="question">Are you working with a real estate agent?</h3>
-          <div class="answerBox" onclick="next()">
-            <div class="answerA"></div>
-            <h1 class="answer">Yes</h1>
-            <label>
-          <input class="checkbox" type="radio" name="agent" value="1">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerB"></div>
-            <h1 class="answer">No</h1>
-            <label>
-          <input class="checkbox" type="radio" name="agent" value="0" checked="checked">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
+          <div class="answerList">
+            <input class="radios" id="r29" type="radio" name="agent" value="1" onclick="next()" checked="checked">
+            <label class="btn" for="r29"><img class="btnImg" src="./images/A-BTN.png">Yes</label>
+            <input class="radios" id="r30" type="radio" name="agent" value="2" onclick="next()" >
+            <label class="btn" for="r30"><img class="btnImg" src="./images/B-BTN.png" >No</label>
           </div>
         </section>
         <section id="fifteen">
           <h3 class="question">Do you currently own or rent?</h3>
-          <div class="answerBox" onclick="next()">
-            <div class="answerA"></div>
-            <h1 class="answer">Own</h1>
-            <label>
-          <input class="checkbox" type="radio" name="rent" value="Own">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerB"></div>
-            <h1 class="answer">Rent</h1>
-            <label>
-          <input class="checkbox" type="radio" name="rent" value="Rent" checked="checked">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
+          <div class="answerList">
+            <input class="radios" id="r31" type="radio" name="rent" value="Rent" onclick="next()" checked="checked">
+            <label class="btn" for="r31"><img class="btnImg" src="./images/A-BTN.png">Rent</label>
+            <input class="radios" id="r32" type="radio" name="rent" value="Own" onclick="next()" >
+            <label class="btn" for="r32"><img class="btnImg" src="./images/B-BTN.png" >Own</label>
           </div>
         </section>
         <section id="sixteen">
           <h3 class="question">Have you found a home?</h3>
-          <div class="answerBox" onclick="next()">
-            <div class="answerA"></div>
-            <h1 class="answer">Yes</h1>
-            <label>
-          <input class="checkbox" type="radio" name="found" value="1">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
-          </div>
-          <div class="answerBox" onclick="next()">
-            <div class="answerB"></div>
-            <h1 class="answer">No</h1>
-            <label>
-          <input class="checkbox" type="radio" name="found" value="0" checked="checked">
-          <img class="checkmark" src="./images/check.png" alt="">
-        </label>
+          <div class="answerList">
+            <input class="radios" id="r33" type="radio" name="home_found" value="1" onclick="next()">
+            <label class="btn" for="r33"><img class="btnImg" src="./images/A-BTN.png">Yes</label>
+            <input class="radios" id="r34" type="radio" name="home_found" value="2" onclick="next()" checked="checked">
+            <label class="btn" for="r34"><img class="btnImg" src="./images/B-BTN.png" >No</label>
           </div>
         </section>
         <section id="seventeen">
