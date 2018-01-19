@@ -86,7 +86,6 @@
         </section>
         <section id="seven">
           <h3 class="question">What is your current loan type?</h3>
-
           <div class="answerList">
             <input class="radios" id="r11" type="radio" name="loanType"  value="FHA"  onclick="next()">
             <label class="btn" for="r11"><img class="btnImg" src="./images/A-BTN.png">FHA</label>
@@ -128,7 +127,6 @@
         <!--  Path 2 -->
         <section id="eleven">
           <h3 class="question">When are you planning to request your $0 Down VA Loan (Up to $417,000)?</h3>
-
           <div class="answerList">
             <input class="radios" id="r19" type="radio" name="buyDate" value="Right Away"  onclick="next()" checked="checked">
             <label class="btn" for="r19"><img class="btnImg" src="./images/A-BTN.png">Right Away</label>
@@ -215,14 +213,14 @@
           <div class="addressEntry" onclick="">
             <input class="addressInput validate" type="text" name="currentAddress" value="" placeholder="Address">
           </div>
-          <div class="submitTitle">City*</div>
+          <div  id="cityLabel" class="submitTitle">City*</div>
           <div class="cityEntry" onclick="">
-            <input class="cityInput validate" type="text" name="currentCity" value="" placeholder="City">
+            <input id="currentCity" class="cityInput validate" type="text" name="currentCity" value="" placeholder="City">
           </div>
-          <div class="submitTitle">State*</div>
+          <div id="stateLabel" class="submitTitle">State*</div>
           <div class="stateEntry" onclick="">
             <!-- <input class="stateInput validate" type="text" name="currentState" value="" placeholder="State"> -->
-            <select class="stateInput validate">
+            <select id="currentState" class="stateInput validate" name="currentState">
               	<option value="AL">Alabama</option>
               	<option value="AK">Alaska</option>
               	<option value="AZ">Arizona</option>

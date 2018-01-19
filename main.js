@@ -10,12 +10,11 @@ $(document).ready(function() {
 
   $("#submit").on("click", function(e) {
     validateForm()
-    if (valid === true) {
-      $("form").submit(function(event) {
+
         var str = $("form").serialize();
         console.log(str);
-      })
-    }
+
+
   })
 
 
@@ -108,8 +107,12 @@ function runZip(zip) {
       if (Object.keys(myData).length === 0) {
         console.log("Nothing here!");
       } else {
-        console.log(myData.places[0]["place name"]);
-        console.log(myData.places[0]["state abbreviation"]);
+        $('#currentCity').val(myData.places[0]["place name"]).css('display', 'none');
+        $('#cityLabel').css('display', 'none');
+        $('.cityEntry').css('display', 'none');
+        $('#currentState').val(myData.places[0]["state abbreviation"]).css('display', 'none');
+        $('#stateLabel').css('display', 'none');
+        $('.stateEntry').css('display', 'none');
       }
     };
   };
@@ -125,7 +128,9 @@ function validateForm() {
       isVal = ""
       $(this).removeClass("warning")
       valid = true
-      runZip(isZip)
+      if (currentView === 'nine') {
+        runZip(isZip)
+      }
     } else {
       $(this).addClass("warning")
       $(this).focus()
