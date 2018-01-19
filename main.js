@@ -11,8 +11,8 @@ $(document).ready(function() {
   $("#submit").on("click", function(e) {
     validateForm()
 
-        var str = $("form").serialize();
-        console.log(str);
+    var str = $("form").serialize();
+    console.log(str);
 
 
   })
@@ -100,7 +100,7 @@ function hasMortgage(answer) {
 
 function runZip(zip) {
   var client = new XMLHttpRequest();
-  client.open("GET", 'http://api.zippopotam.us/us/'+zip, true);
+  client.open("GET", 'http://api.zippopotam.us/us/' + zip, true);
   client.onreadystatechange = function() {
     if (client.readyState == 4) {
       let myData = JSON.parse(client.responseText);
@@ -142,6 +142,19 @@ function validateForm() {
     var isFilled = $(this).val()
     if (isFilled.length > 0) {
       isFilled = ""
+      valid = true
+      $(this).removeClass("warning")
+    } else {
+      valid = false
+      $(this).addClass("warning");
+      $(this).focus()
+    }
+  })
+
+  frame.find('input[type=tel]').each(function() {
+    var isTel = $(this).val()
+    if (isTel.length === 10) {
+      isTel = ""
       valid = true
     } else {
       valid = false

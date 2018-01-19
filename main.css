@@ -131,6 +131,10 @@ button:focus {
   outline:0;
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
 .nextBtn {
   width: 200px;
   height: 60px;
