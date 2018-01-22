@@ -158,9 +158,12 @@ function validateForm() {
 
   frame.find('input[type=tel]').each(function() {
     var isTel = $(this).val()
-    if (isTel.length === 10) {
+    console.log(isTel.length);
+    // reason for length of 14, includeds special characters () - 
+    if (isTel.length === 14) {
       isTel = ""
       valid = true
+      $(this).removeClass("warning")
     } else {
       valid = false
       $(this).addClass("warning");

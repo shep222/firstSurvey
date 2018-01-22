@@ -33,31 +33,31 @@
           <h1 class="title">Are you eligible? Take this quick survey to find out!</h1>
           <h3 class="question">Are you or a family member living with a veteran?</h3>
           <div class="answerList">
-            <input class="radios" id="r1" type="radio" name="status"  value="1" checked="checked" onclick="next()">
+            <input class="radios" id="r1" type="radio" name="opt_served_military"  value="1" checked="checked" onclick="next()">
             <label class="btn" for="r1"><img class="btnImg" src="./images/A-BTN.png">Yes, we are a Veteran household.</label>
-            <input class="radios" id="r2" type="radio" name="status" value="0" onclick="next()">
+            <input class="radios" id="r2" type="radio" name="opt_served_military" value="0" onclick="next()">
             <label class="btn" for="r2"><img class="btnImg" src="./images/B-BTN.png" >  No, we are not a Veteran household.</label>
           </div>
         </section>
         <section id="two">
           <h3 class="question">Do you currently have a mortgage?</h3>
           <div class="answerList">
-            <input class="radios" id="r3" type="radio" name="mortage"  value="Purchase"  onclick="hasMortgage(false)">
+            <input class="radios" id="r3" type="radio" name="loan_purpose"  value="Purchase"  onclick="hasMortgage(false)">
             <label class="btn" for="r3"><img class="btnImg" src="./images/A-BTN.png">No, I don't have a mortgage but I want one</label>
-            <input class="radios" id="r4" type="radio" name="mortage" value="Refinance" onclick="hasMortgage(true)" checked="checked">
+            <input class="radios" id="r4" type="radio" name="loan_purpose" value="Refinance" onclick="hasMortgage(true)" checked="checked">
             <label class="btn" for="r4"><img class="btnImg" src="./images/B-BTN.png" >Yes, I have a mortgage</label>
           </div>
         </section>
         <section id="three">
           <h3 class="question">What type of home are you looking for?</h3>
           <div class="answerList">
-            <input class="radios" id="r5" type="radio" name="homeType" value="Single family" onclick="next()" checked="checked">
+            <input class="radios" id="r5" type="radio" name="property_type" value="Single family" onclick="next()" checked="checked">
             <label for="r5" class="btn"><img class="btnImg" src="./images/A-BTN.png">Single Family</label>
-            <input class="radios" id="r6" type="radio" name="homeType" value="Multi-family" onclick="next()">
+            <input class="radios" id="r6" type="radio" name="property_type" value="Multi-family" onclick="next()">
             <label for="r6" class="btn"><img class="btnImg" src="./images/B-BTN.png">Multi Family</label>
-            <input class="radios" id="r7" type="radio" name="homeType" value="Townhouse" onclick="next()">
+            <input class="radios" id="r7" type="radio" name="property_type" value="Townhouse" onclick="next()">
             <label for="r7" class="btn"><img class="btnImg" src="./images/C-BTN.png">Town Home</label>
-            <input class="radios" id="r8" type="radio" name="homeType" value="Condominium" onclick="next()">
+            <input class="radios" id="r8" type="radio" name="property_type" value="Condominium" onclick="next()">
             <label for="r8" class="btn"><img class="btnImg" src="./images/D-BTN.png">Condo</label>
           </div>
         </section>
@@ -75,9 +75,9 @@
         <section id="five">
           <h3 class="question">Would you like $5,000 or more cash back?</h3>
           <div class="answerList">
-            <input class="radios" id="r9" type="radio" name="cashBack"  value="1"  onclick="next()">
+            <input class="radios" id="r9" type="radio" name="additional_cash_needed"  value="1"  onclick="next()">
             <label class="btn" for="r9"><img class="btnImg" src="./images/A-BTN.png">Yes</label>
-            <input class="radios" id="r10" type="radio" name="cashBack" value="0" onclick="next()" checked="checked">
+            <input class="radios" id="r10" type="radio" name="additional_cash_needed" value="0" onclick="next()" checked="checked">
             <label class="btn" for="r10"><img class="btnImg" src="./images/B-BTN.png" >No</label>
           </div>
         </section>
@@ -90,11 +90,11 @@
         <section id="seven">
           <h3 class="question">What is your current loan type?</h3>
           <div class="answerList">
-            <input class="radios" id="r11" type="radio" name="loanType"  value="FHA"  onclick="next()">
+            <input class="radios" id="r11" type="radio" name="current_loan_type"  value="FHA"  onclick="next()">
             <label class="btn" for="r11"><img class="btnImg" src="./images/A-BTN.png">FHA</label>
-            <input class="radios" id="r12" type="radio" name="loanType" value="VA" onclick="next()" checked="checked">
+            <input class="radios" id="r12" type="radio" name="current_loan_type" value="VA" onclick="next()" checked="checked">
             <label class="btn" for="r12"><img class="btnImg" src="./images/B-BTN.png" >VA</label>
-            <input class="radios" id="r13" type="radio" name="loanType" value="Other" onclick="next()">
+            <input class="radios" id="r13" type="radio" name="current_loan_type" value="Other" onclick="next()">
             <label class="btn" for="r13"><img class="btnImg" src="./images/C-BTN.png" >Other</label>
           </div>
         </section>
@@ -102,22 +102,22 @@
           <h3 class="question2">What is your current credit score to the best of your knowledge?</h3>
           <h3 class="question">(Most people have GOOD credit)</h3>
           <div class="answerList">
-            <input class="radios" id="r14" type="radio" name="creditScore" value="excellent"  onclick="next()">
+            <input class="radios" id="r14" type="radio" name="credit_rating" value="excellent"  onclick="next()">
             <label class="btn" for="r14"><img class="btnImg" src="./images/A-BTN.png">Excellent (700+)</label>
-            <input class="radios" id="r15" type="radio" name="creditScore" value="good" onclick="next()" checked="checked">
+            <input class="radios" id="r15" type="radio" name="credit_rating" value="good" onclick="next()" checked="checked">
             <label class="btn" for="r15"><img class="btnImg" src="./images/B-BTN.png" >Good (700-640)</label>
-            <input class="radios" id="r16" type="radio" name="creditScore" value="average" onclick="next()">
+            <input class="radios" id="r16" type="radio" name="credit_rating" value="average" onclick="next()">
             <label class="btn" for="r16"><img class="btnImg" src="./images/C-BTN.png" >Average (640-600)</label>
-            <input class="radios" id="r17" type="radio" name="creditScore" value="fair" onclick="next()">
+            <input class="radios" id="r17" type="radio" name="credit_rating" value="fair" onclick="next()">
             <label class="btn" for="r17"><img class="btnImg" src="./images/D-BTN.png" >Fair (600-560)</label>
-            <input class="radios" id="r18" type="radio" name="creditScore" value="poor" onclick="next()">
+            <input class="radios" id="r18" type="radio" name="credit_rating" value="poor" onclick="next()">
             <label class="btn" for="r18"><img class="btnImg" src="./images/E-BTN.png" >Poor (Below 560)</label>
           </div>
         </section>
         <section id="nine">
           <h3 class="question">What is your current zipcode?</h3>
           <div class="zipcodeEntry">
-            <input id="currentZip" class="zipInput" type="number" name="currentZip" value="" placeholder="Zip Code">
+            <input id="currentZip" class="zipInput" type="number" name="zipcode" value="" placeholder="Zip Code">
           </div>
         </section>
         <section id="ten">
@@ -131,15 +131,15 @@
         <section id="eleven">
           <h3 class="question">When are you planning to request your $0 Down VA Loan (Up to $417,000)?</h3>
           <div class="answerList">
-            <input class="radios" id="r19" type="radio" name="buyDate" value="Right Away"  onclick="next()" checked="checked">
+            <input class="radios" id="r19" type="radio" name="moving_date" value="Right Away"  onclick="next()" checked="checked">
             <label class="btn" for="r19"><img class="btnImg" src="./images/A-BTN.png">Right Away</label>
-            <input class="radios" id="r20" type="radio" name="buyDate" value="0-3 Months" onclick="next()" >
+            <input class="radios" id="r20" type="radio" name="moving_date" value="0-3 Months" onclick="next()" >
             <label class="btn" for="r20"><img class="btnImg" src="./images/B-BTN.png" >Within 90 days</label>
-            <input class="radios" id="r21" type="radio" name="buyDate" value="3-6 Months" onclick="next()">
+            <input class="radios" id="r21" type="radio" name="moving_date" value="3-6 Months" onclick="next()">
             <label class="btn" for="r21"><img class="btnImg" src="./images/C-BTN.png" >3-6 Months</label>
-            <input class="radios" id="r22" type="radio" name="buyDate" value="6-12 Months" onclick="next()">
+            <input class="radios" id="r22" type="radio" name="moving_date" value="6-12 Months" onclick="next()">
             <label class="btn" for="r22"><img class="btnImg" src="./images/D-BTN.png" >6-12 Months</label>
-            <input class="radios" id="r23" type="radio" name="buyDate" value="12+ Months" onclick="next()">
+            <input class="radios" id="r23" type="radio" name="moving_date" value="12+ Months" onclick="next()">
             <label class="btn" for="r23"><img class="btnImg" src="./images/E-BTN.png" >12+ Months</label>
           </div>
         </section>
@@ -152,33 +152,33 @@
         <section id="thirteen">
           <h3 class="question">What is your estimated down payment?</h3>
           <div class="answerList">
-            <input class="radios" id="r24" type="radio" name="downPayment" value="5.00" onclick="next()" checked="checked">
+            <input class="radios" id="r24" type="radio" name="estimated_down_payment" value="5.00" onclick="next()" checked="checked">
             <label class="btn" for="r24"><img class="btnImg" src="./images/A-BTN.png">0-5%</label>
-            <input class="radios" id="r25" type="radio" name="downPayment" value="10.00" onclick="next()" >
+            <input class="radios" id="r25" type="radio" name="estimated_down_payment" value="10.00" onclick="next()" >
             <label class="btn" for="r25"><img class="btnImg" src="./images/B-BTN.png" >10%</label>
-            <input class="radios" id="r26" type="radio" name="downPayment" value="15.00" onclick="next()">
+            <input class="radios" id="r26" type="radio" name="estimated_down_payment" value="15.00" onclick="next()">
             <label class="btn" for="r26"><img class="btnImg" src="./images/C-BTN.png" >15%</label>
-            <input class="radios" id="r27" type="radio" name="downPayment" value="20.00" onclick="next()">
+            <input class="radios" id="r27" type="radio" name="estimated_down_payment" value="20.00" onclick="next()">
             <label class="btn" for="r27"><img class="btnImg" src="./images/D-BTN.png" >20%</label>
-            <input class="radios" id="r28" type="radio" name="downPayment" value="25.00" onclick="next()">
+            <input class="radios" id="r28" type="radio" name="estimated_down_payment" value="25.00" onclick="next()">
             <label class="btn" for="r28"><img class="btnImg" src="./images/E-BTN.png" >25%</label>
           </div>
         </section>
         <section id="fourteen">
           <h3 class="question">Are you working with a real estate agent?</h3>
           <div class="answerList">
-            <input class="radios" id="r29" type="radio" name="agent" value="1" onclick="next()" checked="checked">
+            <input class="radios" id="r29" type="radio" name="agent_found" value="1" onclick="next()" checked="checked">
             <label class="btn" for="r29"><img class="btnImg" src="./images/A-BTN.png">Yes</label>
-            <input class="radios" id="r30" type="radio" name="agent" value="2" onclick="next()" >
+            <input class="radios" id="r30" type="radio" name="agent_found" value="2" onclick="next()" >
             <label class="btn" for="r30"><img class="btnImg" src="./images/B-BTN.png" >No</label>
           </div>
         </section>
         <section id="fifteen">
           <h3 class="question">Do you currently own or rent?</h3>
           <div class="answerList">
-            <input class="radios" id="r31" type="radio" name="rent" value="Rent" onclick="next()" checked="checked">
+            <input class="radios" id="r31" type="radio" name="own_rent" value="Rent" onclick="next()" checked="checked">
             <label class="btn" for="r31"><img class="btnImg" src="./images/A-BTN.png">Rent</label>
-            <input class="radios" id="r32" type="radio" name="rent" value="Own" onclick="next()" >
+            <input class="radios" id="r32" type="radio" name="own_rent" value="Own" onclick="next()" >
             <label class="btn" for="r32"><img class="btnImg" src="./images/B-BTN.png" >Own</label>
           </div>
         </section>
@@ -194,7 +194,7 @@
         <section id="seventeen">
           <h3 class="question">What zip code are you searching in?</h3>
           <div class="zipcodeEntry">
-            <input class="zipInput validate" type="number" name="searchZip" value="" placeholder="Zip Code">
+            <input class="zipInput validate" type="number" name="property_zip" value="" placeholder="Zip Code">
           </div>
         </section>
         <!-- Sumit Section  -->
@@ -202,28 +202,28 @@
           <h3 class="question1">Enter your information and get your results - fast!</h3>
           <div class="submitTitle">First Name*</div>
           <div class="fNameEntry" onclick="">
-            <input class="fNameInput validate" type="text" name="fName" value="" placeholder="First Name">
+            <input class="fNameInput validate" type="text" name="first_name" value="" placeholder="First Name">
           </div>
           <div class="submitTitle">Last Name*</div>
           <div class="lNameEntry" onclick="">
-            <input class="lNameInput validate" type="text" name="lName" value="" placeholder="Last Name">
+            <input class="lNameInput validate" type="text" name="last_name" value="" placeholder="Last Name">
           </div>
           <div class="submitTitle">Phone Primary*</div>
           <div class="phoneEntry" onclick="">
-            <input id="primaryPhone" class="phoneInput validate" type="tel" name="primaryPhone" value="" placeholder="Phone">
+            <input id="primaryPhone" class="phoneInput validate" type="tel" name="phone_primary" value="" placeholder="Phone">
           </div>
           <div class="submitTitle">Current Home Address*</div>
           <div class="addressEntry" onclick="">
-            <input class="addressInput validate" type="text" name="currentAddress" value="" placeholder="Address">
+            <input class="addressInput validate" type="text" name="address" value="" placeholder="Address">
           </div>
           <div  id="cityLabel" class="submitTitle">City*</div>
           <div class="cityEntry" onclick="">
-            <input id="currentCity" class="cityInput validate" type="text" name="currentCity" value="" placeholder="City">
+            <input id="currentCity" class="cityInput validate" type="text" name="city" value="" placeholder="City">
           </div>
           <div id="stateLabel" class="submitTitle">State*</div>
           <div class="stateEntry" onclick="">
             <!-- <input class="stateInput validate" type="text" name="currentState" value="" placeholder="State"> -->
-            <select id="currentState" class="stateInput validate" name="currentState">
+            <select id="currentState" class="stateInput validate" name="state">
               	<option value="AL">Alabama</option>
               	<option value="AK">Alaska</option>
               	<option value="AZ">Arizona</option>
